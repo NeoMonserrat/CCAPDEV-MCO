@@ -3,20 +3,20 @@
 <head>
     <title>Home | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../CSS/Design.css" rel="stylesheet">
+    <link href='../CSS/Design.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
+    
 <body>
     <header>
         <nav>
             <div class="menu">
-                <a href="../HTML/Home.html"><img src="../Media/N-Logo.png" height="25"></a>
+                <a href="../HTML/Home.html"> <img src="../Media/N-Logo.png" height="25"> </a>
                 <div class="movies">
                     <button class="moviesbtn">Movies & Shows</button>
                     <div class="movies-content">
-                        <a href="../HTML/Movies.html">Movies</a>
-                        <a href="../HTML/TV Shows.html">TV Shows</a>
+                      <a href="../HTML/Movies.html">Movies</a>
+                      <a href="../HTML/TV Shows.html">TV Shows</a>
                     </div>
                 </div>
                 <div class="forums">
@@ -26,7 +26,7 @@
             </div>
             <div class="buttons">
                 <div class="search">
-                    <input class="search-bar" type="text" placeholder="Search...">
+                    <input class="search-bar" type="text" placeholder=" Search...">
                 </div>
                 <a class="button" href="../HTML/CreatePost.html">
                     <div class="plus-icon"></div>
@@ -42,73 +42,158 @@
         </div>
     </header>
     <main>
-        <br><br><br>  
-        <h2><span class="main_text">Popular Movies in Netflix</span></h2>
-        <hr><br>
+    <br><br><br>  
+    <h2><span class="main_text"> Popular Movies in Netflix </span> </h2> <hr> <br>
         <div class="MovieCollection">
             <ul>
                 <li>
-                    <a href="MovieInformation.html?title=Hereditary" onclick="showMovieInfo('Hereditary')">
+                     <a href="MovieInformation.html?title=Hereditary" onclick="showMovieInfo('Hereditary')">
+                    <div class="container"> 
+                        <img src="../Media/Hereditary.jpg"> 
+                        <div class="overlay"> Hereditary </div>
+                    </div> 
+                     </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
                         <div class="container"> 
-                            <img src="../Media/Hereditary.jpg"> 
-                            <div class="overlay">Hereditary</div>
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/BirdBox.jpg?raw=true"> 
+                            <div class="overlay"> Bird Box </div>
                         </div> 
                     </a>
                 </li>
-                <!-- Add more movie list items here -->
-            </ul>
-        </div>  
-        <br><br><br><br><br><br><br><br><br><br><br><br>  
-        <h2><span class="main_text">Popular Shows in Netflix</span></h2>
-        <hr><br>
-        <div class="MovieCollection">
-            <ul>
+
                 <li>
-                    <a href="MovieInformation.html?title=Stranger Things" onclick="showMovieInfo('Stranger Things')">
+                    <a href="Home.html">
                         <div class="container"> 
-                            <img src="../Media/Stranger Things.jpg"> 
-                            <div class="overlay">Stranger Things</div>
-                        </div>
-                    </a> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/KnivesOut.jpg?raw=true"> 
+                            <div class="overlay"> Knives Out </div>
+                        </div> 
+                    </a>
                 </li>
-                <!-- Add more show list items here -->
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Parasite.jpg?raw=true"> 
+                            <div class="overlay"> Parasite </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Extraction2.jpg?raw=true"> 
+                            <div class="overlay"> Extraction 2 </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                    <div class="container"> 
+                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/AQuietPlace.jpg?raw=true"> 
+                        <div class="overlay"> A Quiet Place </div>
+                    </div> 
+                    </a>
+                </li>
             </ul>
         </div>  
-        <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>  
+    <h2> <span class="main_text"> Popular Shows in Netflix </span> </h2> <hr> <br>
+    <div class="MovieCollection">
+        <ul>
+            <li>
+                <a href="MovieInformation.html?title=Stranger Things" onclick="showMovieInfo('Stranger Things')">
+                <div class="container"> 
+                    <img src="../Media/Stranger Things.jpg"> 
+                    <div class="overlay"> Stranger Things </div>
+                </div>
+                </a> 
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/You.jpg?raw=true"> 
+                        <div class="overlay"> You </div>
+                    </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                <div class="container"> 
+                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/SquidGame.jpg?raw=true"> 
+                    <div class="overlay"> Squid Game </div>
+                </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                <div class="container"> 
+                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/MoneyHeist.jpg?raw=true"> 
+                    <div class="overlay"> Money Heist </div>
+                </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Wednesday.jpg?raw=true"> 
+                        <div class="overlay"> Wednesday </div>
+                    </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/HowToGetAwayWithMurder.jpg?raw=true"> 
+                        <div class="overlay"> How To Get Away With Murder </div>
+                    </div> 
+                </a>
+        </ul>
+    </div>  
+    <br><br><br><br><br><br><br><br><br><br><br>
     </main>
 
     <footer>
         <div class="left_pillar"> 
             <ul class="left_ul">  
                 <h3>Netboxd</h3>
-                <li><a href="../HTML/Home.html">Home</a></li>
-                <li><a href="../HTML/MovieInformation.html">Movies Information</a></li>
-                <li><a href="../HTML/ReviewsandRatings.html">Reviews and Ratings</a></li>
+                <li> <a href="../HTML/Home.html"> Home </a></li>
+                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
+                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
             </ul>
         </div>
 
-        <div class="center_pillar"> 
+         <div class="center_pillar"> 
             <div class="social_media">
                 <h3>Social Media</h3>
             </div>
-            <div class="social_icons">
+             <div class="social_icons">
                 <ul>  
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-x-twitter"></i></a></li> <!-- Should be "fa-twitter" instead of "fa-x-twitter" -->
+                    <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-            </div>
+             </div>   
         </div>
-
+        
         <div class="right_pillar"> 
             <ul class="right_ul">  
                 <h3>More Contacts</h3>
-                <li>Email: Netboxd@gmail.com</li>
-                <li>Tel: 1234-5678</li>
+                <li> Email: Netboxd@gmail.com</li>
+                <li> Tel: 1234-5678</a></li>
             </ul>
         </div>
     </footer>
-</body>
+    </body>
 </html>
