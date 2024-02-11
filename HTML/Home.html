@@ -4,16 +4,19 @@
     <title>Home | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='../CSS/Home.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     
 <body>
+    <div class="start"> 
+        
+    </div>
+
     <header>
         <nav>
             <div class="menu">
                 <a href="../HTML/Home.html"> <img src="../Media/N-Logo.png" height="25"> </a>
                 <div class="movies">
-                    <button class="moviesbtn">Movies</button>
+                    <button class="moviesbtn">Movies & Shows</button>
                     <div class="movies-content">
                       <a href="../HTML/MovieInformation.html">Movie Information</a>
                       <a href="../HTML/ReviewsandRatings.html">Reviews and Ratings</a>
@@ -21,20 +24,12 @@
                 </div>
                 <a href="../HTML/Help.html">Help</a>
             </div>
-
-            <div class="search">
-                <input class="search-bar" type="text" placeholder="Search...">
-            </div>
-            
             <div class="buttons">
-                <div class="person-icon">
-                    <div class="personal-content">
-                        <a href="#">Account Details</a>
-                        <a href="#">Favorites</a>
-                        <a href="#">Settings</a>
-                        <a href="#">Logout</a>
-                    </div>
+                <div class="search">
+                    <input class="search-bar" type="text">
                 </div>
+                <div class="search-icon"></div>
+                <div class="person-icon"></div>
             </div>
         </nav>
 
@@ -43,31 +38,130 @@
         </div>
     </header>
     <main>
-      <img src="../Media/Background.jpeg">
+    <br><br><br>  
+    <h2><span class="main_text"> Popular Movies in Netflix </span> </h2> <hr> <br>
+        <div class="MovieCollection">
+            <ul>
+                <li>
+                    <a href="Home.html">
+                    <div class="container"> 
+                        <img src="../Media/Hereditary.jpg"> 
+                        <div class="overlay"> Hereditary </div>
+                    </div> 
+                     </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="../Media/background.jpeg"> 
+                            <div class="overlay"> Movie 2 </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="../Media/background.jpeg"> 
+                            <div class="overlay"> Movie 3 </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="../Media/background.jpeg"> 
+                            <div class="overlay"> Movie 4 </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                        <div class="container"> 
+                            <img src="../Media/background.jpeg"> 
+                            <div class="overlay"> Movie 5 </div>
+                        </div> 
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Home.html">
+                    <div class="container"> 
+                        <img src="../Media/background.jpeg"> 
+                        <div class="overlay"> Movie 6 </div>
+                    </div> 
+                    </a>
+                </li>
+            </ul>
+        </div>  
+    <br><br><br><br><br><br><br><br><br><br><br><br>  
+    <h2> <span class="main_text"> Popular Shows in Netflix </span> </h2> <hr> <br>
+    <div class="MovieCollection">
+        <ul>
+            <li>
+                <a href="Home.html">
+                <div class="container"> 
+                    <img src="../Media/Stranger Things.jpg"> 
+                    <div class="overlay"> Stranger Things </div>
+                </div>
+                </a> 
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="../Media/background.jpeg"> 
+                        <div class="overlay"> Show 2 </div>
+                    </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                <div class="container"> 
+                    <img src="../Media/background.jpeg"> 
+                    <div class="overlay"> Show 3 </div>
+                </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                <div class="container"> 
+                    <img src="../Media/background.jpeg"> 
+                    <div class="overlay"> Show 4 </div>
+                </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="../Media/background.jpeg"> 
+                        <div class="overlay"> Show 5 </div>
+                    </div> 
+                </a>
+            </li>
+
+            <li>
+                <a href="Home.html">
+                    <div class="container"> 
+                        <img src="../Media/background.jpeg"> 
+                        <div class="overlay"> Show 6 </div>
+                    </div> 
+                </a>
+        </ul>
+    </div>  
+    <br><br><br><br><br><br><br><br><br><br><br>
     </main>
 
     <footer>
-        <div class="layout">
-            <div class="section">
-                <h3>Website Title</h3>
-                <ul class="footerinfo">
-                    <li><a href="#">Home</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Contact</a></li>
-                </ul>
-            </div>
-            <div class="section">
-                <h3>Social Media</h3>
-                <ul class="sociallinks">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href='#'>Instagram</a></li>
-                    <li><a href='#'>Tiktok</a></li>
-                </ul>
-            </div>
-        </div>
-            
-<!--         <div class="left_pillar"> 
-            <ul class="bottom">  
+        <div class="left_pillar"> 
+            <ul class="left_ul">  
+                <h3>Netboxd</h3>
                 <li> <a href="../HTML/Home.html"> Home </a></li>
                 <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
                 <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
@@ -75,19 +169,20 @@
         </div>
 
         <div class="center_pillar"> 
-            <ul class="bottom">  
-                <li> <a href="../HTML/Home.html"> Home </a></li>
-                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
-                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
+            <ul>  
+                <h3>Social Media</h3>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href='#'>Instagram</a></li>
+                    <li><a href='#'>Tiktok</a></li>
             </ul>
         </div>
         <div class="right_pillar"> 
-            <ul class="bottom">  
-                <li> <a href="../HTML/Home.html"> Home </a></li>
-                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
-                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
+            <ul class="right_ul">  
+                <h3>More Contacts</h3>
+                <li> Email: Netboxd@gmail.com</li>
+                <li> Tel: 1234-5678</a></li>
             </ul>
-        </div> -->
+        </div>
     </footer>
-</body>
+    </body>
 </html>
