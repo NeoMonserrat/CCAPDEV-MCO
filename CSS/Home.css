@@ -295,7 +295,25 @@ footer a {
 }
 
 .center_pillar {
-    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social_media {
+    margin-bottom: 10px;
+}
+
+.social_icons ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.social_icons ul li {
+    margin: 0 5px; 
 }
 
 .right_pillar {
