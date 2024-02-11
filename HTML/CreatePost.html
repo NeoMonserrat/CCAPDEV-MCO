@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Help | Netflix Reviews</title>
+    <title>Create a Post | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../CSS/Design.css" rel="stylesheet">
-    <link href="../CSS/Help.css" rel="stylesheet">
+    <link href="../CSS/CreatePost.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -40,26 +40,21 @@
     </header>
 
     <main>
-        <div class="help-content">
-            <h1>Need Help?</h1>
-            <p>Welcome to the Netflix Reviews Help page. Here you can find answers to common questions and tips.</p>
-            
-            <div class="FAQ">
-                <h2>Frequently Asked Questions</h2>
-                <ul>
-                    <li><strong>How do I create an account?</strong><br> To create an account, click on the "Sign Up" button on the top right corner of the page and follow the instructions.</li>
-                    <li><strong>How do I reset my password?</strong><br> You can reset your password by clicking on the "Forgot Password" link on the login page and following the prompts.</li>
-                </ul>
-            </div>
-            
-            <div class="Contacts">
-                <h2>Contact Us</h2>
-                <p>If you need further assistance, you can contact our customer support team:</p>
-                <ul>
-                    <li>Email: @netflixreviews.com</li>
-                    <li>Phone: +63 0</li>
-                </ul>
-            </div>
+        <div class="create-post-container">
+            <h1>Create a Post</h1>
+            <form id="create-post-form">
+                <div class="form-group">
+                    <label for="post-title">Title:</label>
+                    <input type="text" id="post-title" name="post-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-content">Content:</label>
+                    <textarea id="post-content" name="post-content" rows="8" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </main>
 

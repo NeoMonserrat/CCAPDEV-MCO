@@ -80,7 +80,6 @@ nav {
 }
 
 .MovieCollection li {
-    
     border-style: solid;
     border-color: black;
     border-radius: 10px;
@@ -122,11 +121,9 @@ nav {
     transition: opacity 0.3s ease;
   }
 
-  .container:hover .overlay {
+.container:hover .overlay {
     opacity: 1;
-  }
-  
-
+}
 
 hr {
     width: 80%;
@@ -195,7 +192,7 @@ hr {
     display: block;
 }
 
-nav a:hover,
+nav .menu a:hover,
 .movies:hover .moviesbtn {
     background-color: rgba(100, 0, 0, 0.90);
 }
@@ -203,6 +200,10 @@ nav a:hover,
 .buttons {
     display: flex;
     padding: 0 30px;
+}
+
+.button:hover {
+    background-color: none;
 }
 
 .search-bar {
