@@ -1,0 +1,26 @@
+.help-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-content h1 {
+    margin-bottom: 20px;
+}
+
+.help-content h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.help-content ul {
+    margin-bottom: 20px;
+}
+
+.help-content ul li {
+    margin-bottom: 10px;
+}
