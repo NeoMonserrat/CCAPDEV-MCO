@@ -30,27 +30,28 @@ nav {
     text-decoration: none;
 }
 
+body {
+    background-color: #141414;
+}
 nav a:hover,
 .movies:hover .moviesbtn {
     background-color: rgba(100, 0, 0, 0.90);
 }
 
 .account-content {
+    color: white;
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
     font-size: 1em;
-
+    
 }
 
 .line-divider {
-    border-top: 1px solid #000; 
+    border-top: 1px solid white; 
     margin: 20px 0; 
 }
 
-.profile-header {
-    font-weight: lighter;
-}
 .content-container {
     display: flex;
     font-size: 15px;
@@ -161,3 +162,5 @@ nav a:hover,
     text-decoration: underline;
     color:#0A58A6;
 }
+
+
