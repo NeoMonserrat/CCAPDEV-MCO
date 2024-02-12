@@ -1,0 +1,33 @@
+.help-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+p {
+    margin-bottom: 15px;
+}
+  
+.FAQ {
+    margin-bottom: 30px;
+}
+  
+.Contacts {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.FAQ ul,
+.Contacts ul {
+    list-style: none;
+}
+  
+.FAQ ul li,
+.Contacts ul li {
+    margin-bottom: 10px;
+}

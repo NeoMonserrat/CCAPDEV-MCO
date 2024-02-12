@@ -1,0 +1,33 @@
+.movie {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5px;
+}
+
+.movie img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie h2 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.movie p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+.movie p strong {
+    font-weight: bold;
+}

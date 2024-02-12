@@ -3,15 +3,11 @@
 <head>
     <title>Home | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='../CSS/Home.css' rel='stylesheet'>
+    <link href='../CSS/Design.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
     
 <body>
-    <div class="start"> 
-        
-    </div>
-
     <header>
         <nav>
             <div class="menu">
@@ -19,18 +15,25 @@
                 <div class="movies">
                     <button class="moviesbtn">Movies & Shows</button>
                     <div class="movies-content">
-                      <a href="../HTML/MovieInformation.html">Movie Information</a>
-                      <a href="../HTML/ReviewsandRatings.html">Reviews and Ratings</a>
+                      <a href="../HTML/Movies.html">Movies</a>
+                      <a href="../HTML/TV Shows.html">TV Shows</a>
                     </div>
+                </div>
+                <div class="forums">
+                    <a href="../HTML/Forums.html">Forums</a>
                 </div>
                 <a href="../HTML/Help.html">Help</a>
             </div>
             <div class="buttons">
                 <div class="search">
-                    <input class="search-bar" type="text">
+                    <input class="search-bar" type="text" placeholder=" Search...">
                 </div>
-                <div class="search-icon"></div>
-                <div class="person-icon"></div>
+                <a class="button" href="../HTML/CreatePost.html">
+                    <div class="plus-icon"></div>
+                </a>
+                <a class="button" href="../HTML/CreatePost.html">
+                    <div class="person-icon"></div>
+                </a>
             </div>
         </nav>
 
@@ -44,7 +47,7 @@
         <div class="MovieCollection">
             <ul>
                 <li>
-                    <a href="Home.html">
+                     <a href="MovieInformation.html?title=Hereditary" onclick="showMovieInfo('Hereditary')">
                     <div class="container"> 
                         <img src="../Media/Hereditary.jpg"> 
                         <div class="overlay"> Hereditary </div>
@@ -103,7 +106,7 @@
     <div class="MovieCollection">
         <ul>
             <li>
-                <a href="Home.html">
+                <a href="MovieInformation.html?title=Stranger Things" onclick="showMovieInfo('Stranger Things')">
                 <div class="container"> 
                     <img src="../Media/Stranger Things.jpg"> 
                     <div class="overlay"> Stranger Things </div>

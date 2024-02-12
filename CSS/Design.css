@@ -80,7 +80,6 @@ nav {
 }
 
 .MovieCollection li {
-    
     border-style: solid;
     border-color: black;
     border-radius: 10px;
@@ -122,11 +121,9 @@ nav {
     transition: opacity 0.3s ease;
   }
 
-  .container:hover .overlay {
+.container:hover .overlay {
     opacity: 1;
-  }
-  
-
+}
 
 hr {
     width: 80%;
@@ -195,7 +192,7 @@ hr {
     display: block;
 }
 
-nav a:hover,
+nav .menu a:hover,
 .movies:hover .moviesbtn {
     background-color: rgba(100, 0, 0, 0.90);
 }
@@ -205,30 +202,34 @@ nav a:hover,
     padding: 0 30px;
 }
 
+.button:hover {
+    background-color: none;
+}
+
 .search-bar {
     margin-top: 10px;
-    height: 20px;
-    width: 20x;
+    height: 25px;
+    width: 200px;
     border: 1px solid gray;
     border-radius: 15px;
     outline: none;
 }
 
-.search-icon,
+.plus-icon,
 .person-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     margin: 10px;
     cursor: pointer;
     background-repeat: no-repeat;
 }
 
-.search-icon {
-    background-image: url("../Media/Search.png");
+.plus-icon {
+    background-image: url("../Media/Plus.png");
 }
 
-.search-icon:hover {
-    background-image: url("../Media/SearchHover.png");
+.plus-icon:hover {
+    background-image: url("../Media/PlusHover.png");
 }
 
 .person-icon {
