@@ -2,10 +2,15 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+     height: 800px;
+    display: flex;
+    flex-direction: column;
 }
   
 h1, h2 {
-    color: #333;
+    padding-top: 50px;
+    letter-spacing: 1px;
+    color: white;
     margin-bottom: 10px;
 }
   
@@ -29,5 +34,11 @@ p {
   
 .FAQ ul li,
 .Contacts ul li {
+    margin-bottom: 10px;
+}
+
+.FAQ ul li strong,
+.Contacts ul li  strong{
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
