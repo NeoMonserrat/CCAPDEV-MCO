@@ -87,7 +87,7 @@ nav a:hover,
 }
 
 .edit-prompt {
-    color:black;
+    color:white;
     font-size: 16px;
     padding: 16px 32px;
 }
@@ -165,4 +165,7 @@ nav a:hover,
     color:#0A58A6;
 }
 
-
+.setting-icon2 {
+    height: 24px;
+    width: 24px;
+}

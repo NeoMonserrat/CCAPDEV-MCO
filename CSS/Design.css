@@ -216,7 +216,8 @@ nav .menu a:hover,
 }
 
 .plus-icon,
-.person-icon {
+.person-icon,
+.setting-icon {
     width: 24px;
     height: 24px;
     margin: 10px;

@@ -4,6 +4,7 @@
         <title>User Profile | Netflix Reviews</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='../CSS/UserProfile.css' rel='stylesheet'>
+        <link href='../CSS/Design.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="UserProfile.js"></script>
     </head>
@@ -12,8 +13,31 @@
         <nav>
             <div class="menu">
                 <a href="../HTML/Home.html"> <img src="../Media/N-Logo.png" height="25"> </a>
+                <div class="movies">
+                    <button class="moviesbtn">Movies & Shows</button>
+                    <div class="movies-content">
+                      <a href="../HTML/Movies.html">Movies</a>
+                      <a href="../HTML/TV Shows.html">TV Shows</a>
+                    </div>
+                </div>
+                <div class="forums">
+                    <a href="../HTML/Forums.html">Forums</a>
+                </div>
+                <a href="../HTML/Help.html">Help</a>
+            </div>
+            <div class="buttons">
+                <div class="search">
+                    <input class="search-bar" type="text" placeholder=" Search...">
+                </div>
+                <a class="button" href="../HTML/CreatePost.html"> 
+                    <div class="plus-icon"></div>
+                </a>
+                <a class="button" href="../HTML/UserProfile.html">  <!--FIXME: change to a popupwindow-->
+                    <div class="setting-icon"> <img src="../Media/Cogwheel.png" alt="Settings" class="setting-icon2"> </div> 
+                </a>
             </div>
         </nav>
+
         <div class="account-content">
             <h1 style="color: white">Account</h1>
             <div class="line-divider"></div>
