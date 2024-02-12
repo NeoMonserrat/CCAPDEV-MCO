@@ -169,3 +169,45 @@ nav a:hover,
     height: 24px;
     width: 24px;
 }
+
+.favorite-header,
+.reviewed-header {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.favorite-movies,
+.reviewed-movies {
+    display: flex;
+    justify-content: left;
+}
+.favorite-container ul,
+.reviewed-container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.favorite-container li,
+.reviewed-container li {
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.favorite-container li:hover {
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.favorite-container img,
+.reviewed-container img {
+    height: 225px;
+    width: 150px;
+    border-radius: 10px;
+}
