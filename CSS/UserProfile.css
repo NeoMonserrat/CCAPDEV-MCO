@@ -165,7 +165,8 @@ nav a:hover,
     color:#0A58A6;
 }
 
-.setting-icon2 {
+.setting-icon2,
+.close-icon2 {
     height: 24px;
     width: 24px;
 }
@@ -206,8 +207,44 @@ nav a:hover,
 }
 
 .favorite-container img,
-.reviewed-container img {
+.temp-class img {
     height: 225px;
     width: 150px;
     border-radius: 10px;
+}
+
+.review-modal {
+    --gap: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: var(--gap);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.review-content-container {
+    background: #141414;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 20px; 
+    color: white 
+}
+
+.review-content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+}
+
+.review-title{
+    flex-grow: 1;
 }

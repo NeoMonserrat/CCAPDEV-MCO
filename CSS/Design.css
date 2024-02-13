@@ -218,7 +218,8 @@ nav .menu a:hover,
 
 .plus-icon,
 .person-icon,
-.setting-icon {
+.setting-icon,
+.close-icon{
     width: 24px;
     height: 24px;
     margin: 10px;
