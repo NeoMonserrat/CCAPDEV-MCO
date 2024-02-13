@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Login | Netboxd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/Login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left_container">
+            <a href="../HTML/Home.html"> <img src="../Media/Netboxd.png" alt="Logo"> </a>
+        </div>
+
+        <div class="right_container">
+            <div class="top_pillar">
+                <h1>Login to Netboxd</h1>
+            </div>
+
+            <div class="middle_pillar">
+                <form action="login.php" method="post">
+                    <label for="yourEmail">Email Address:</label><br>
+                    <input type="email" id="yourEmail" name="yourEmail" required><br><br>
+                    <label for="yourPass">Password:</label><br>
+                    <input type="password" id="yourPass" name="yourPass" required><br><br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+            
+            <div class="bottom_pillar">
+                <p>Don't have an account? <a href="../HTML/Signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
