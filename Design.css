@@ -40,12 +40,12 @@ header {
 }
 
 nav {
-    top: -1px;  
     display: flex;
     position: sticky;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    top: -1px;
     background-color: rgba(0, 0, 0, 1);
     font-size: 20px;
     border-bottom-color: rgba(255, 0, 0, 0.9);;
