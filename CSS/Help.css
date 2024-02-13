@@ -42,3 +42,17 @@ p {
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
+
+.signup {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}

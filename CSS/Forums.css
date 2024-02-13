@@ -47,3 +47,17 @@
 .discussion p {
     margin-bottom: 0;
 }
+
+.signup {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}

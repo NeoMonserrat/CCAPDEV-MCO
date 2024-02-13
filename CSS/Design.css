@@ -7,6 +7,10 @@
     font-family: fantasy;
 }
 
+a:link {
+    text-decoration: none!important;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background-color: black;
@@ -201,6 +205,7 @@ nav .menu a:hover,
 .buttons {
     display: flex;
     padding: 0 30px;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -241,6 +246,20 @@ nav .menu a:hover,
 
 .person-icon:hover {
     background-image: url("../Media/AccountHover.png");
+}
+
+.signup {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
 }
 
 main {

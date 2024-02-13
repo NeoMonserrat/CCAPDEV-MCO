@@ -45,3 +45,17 @@ textarea {
 button:hover {
     background-color: #83161f;
 }
+
+.signup {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}

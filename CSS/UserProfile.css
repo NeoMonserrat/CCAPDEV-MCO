@@ -40,6 +40,20 @@ nav a:hover,
     background-color: rgba(100, 0, 0, 0.90);
 }
 
+.signup {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
 .account-content {
     color: white;
     margin-top: 20px;
