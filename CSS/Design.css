@@ -9,6 +9,7 @@
 
 a:link {
     text-decoration: none!important;
+    color: white;
 }
 
 ::-webkit-scrollbar {
@@ -261,6 +262,16 @@ nav .menu a:hover,
     text-decoration: none;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 main {
     background-color: #141414;
     color: white;
@@ -349,4 +360,8 @@ footer h3{
 
 .right_pillar {
     flex: 25%;
+}
+
+.review-section {
+    padding: 15px;
 }
