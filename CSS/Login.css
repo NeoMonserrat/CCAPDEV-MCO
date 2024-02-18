@@ -16,11 +16,12 @@ body {
 
 .container {
     display: flex;
-    max-width: 400px;
+    max-width: 600px;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: black;
+    box-shadow: 0 0 10px rgb(211, 44, 44);
 }
 
 .left_container {
@@ -50,7 +51,7 @@ body {
     text-align: center;
 }
 
-.middle_pillar input[type="email"],
+.middle_pillar input[type="text"],
 .middle_pillar input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -60,7 +61,7 @@ body {
 }
 
 .middle_pillar input[type="submit"] {
-    background-color: #007bff;
+    background-color: #c40d0d;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -69,7 +70,7 @@ body {
 }
 
 .middle_pillar input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #7e0b0b;
 }
 
 .bottom_pillar {
@@ -80,4 +81,10 @@ body {
 a {
     color: white;
     text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration-line: underline;
+    text-decoration-color: #ca0812;
 }
