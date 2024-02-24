@@ -131,7 +131,7 @@ nav {
     opacity: 1;
 }
 
-hr {
+.main-text hr {
     width: 80%;
     margin: auto;
     border-color: rgb(24, 22, 22);
