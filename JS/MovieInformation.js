@@ -4,20 +4,27 @@ function showMovieInfo(movieTitle) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const params = new URLSearchParams(window.location.search);
-    const movieTitle = params.get("title");
-    const movieData = getMovieData(movieTitle);
+    const movieTitle = localStorage.getItem("movieTitle");
     
-    if (movieData) {
-        document.getElementById('movie-title').innerText = movieData.title;
-        document.getElementById("release-date").innerText = `Release Date: ${movieData.year}`;
-        document.getElementById("director").innerText = `Director: ${movieData.director}`;
-        document.getElementById("cast").innerText = `Cast: ${movieData.cast.join(", ")}`;
-        document.getElementById("synopsis").innerText = `Synopsis: ${movieData.synopsis}`;
+    // Checking if title is null
+    if (movieTitle) {
+        const movieData = getMovieData(movieTitle);
+        
+        if (movieData) {
+            document.getElementById('movie-title').innerText = movieData.title;
+            document.getElementById("release-date").innerText = `Release Date: ${movieData.year}`;
+            document.getElementById("director").innerText = `Director: ${movieData.director}`;
+            document.getElementById("cast").innerText = `Cast: ${movieData.cast.join(", ")}`;
+            document.getElementById("synopsis").innerText = `Synopsis: ${movieData.synopsis}`;
+        } else {
+            alert("Movie not found");
+            window.localation.href = 'Home.html';
+        }
     } else {
         document.getElementById('movie-title').innerText = "Movie not found";
     }
 });
+
 
 function getMovieData(movieTitle) {
     // Dummy data for demonstration
