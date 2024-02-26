@@ -18,10 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("synopsis").innerText = `Synopsis: ${movieData.synopsis}`;
         } else {
             alert("Movie not found");
-            window.localation.href = 'Home.html';
+            window.location.href = 'Home.html';
+            document.getElementById('movie-title').innerText = ``;
+            document.getElementById("release-date").innerText = ``;
+            document.getElementById("director").innerText = ``;
+            document.getElementById("cast").innerText = ``;
+            document.getElementById("synopsis").innerText = ``;
         }
     } else {
-        document.getElementById('movie-title').innerText = "Movie not found";
+        alert("Movie not found");
+        window.location.href = 'Home.html';
+        document.getElementById('movie-title').innerText = ``;
+        document.getElementById("release-date").innerText = ``;
+        document.getElementById("director").innerText = ``;
+        document.getElementById("cast").innerText = ``;
+        document.getElementById("synopsis").innerText = ``;
     }
 });
 
@@ -38,6 +49,7 @@ function getMovieData(movieTitle) {
         },
         "Stranger Things":{
             title: "Stranger Things",
+            year: "2023",
             director: "The Duffer Brothers",
             cast: ["Millie Bobbi Brown", "Sadie Sink"],
             synopsis: "Whirlwing of mysteries are about to happen"
