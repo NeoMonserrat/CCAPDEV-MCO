@@ -1,6 +1,19 @@
 main {
     display: flex;
-    position: relative;
+    max-width: 100%;
+}
+
+.background-container {
+    width: 100%;
+    height: 399px;
+    background: 
+        url("../Media/Background/overlay.png") no-repeat center/cover, 
+        url("../Media/Background/Hereditary.jpg") no-repeat center/cover;
+}
+
+.main-container {
+    margin-left: 85px;
+    display: flex;
     max-width: 100%;
 }
 
@@ -8,8 +21,9 @@ main {
     top: 0;
     margin-left: 10px;
     position: sticky;
-    height: 500px;
-    width: 202px;
+    height: 400px;
+    width: 200px;
+    z-index: 1;
 }
 
 .poster a {
@@ -26,8 +40,10 @@ main {
 
 #netflix-logo {
     height: 20px;
+    width: 15px;
+    padding-bottom: 5px;
     display: block;
-    margin: 2px 2px 2px -2px;
+    margin: 2px 4px 2px 2px;
 }
 
 link {
@@ -53,7 +69,7 @@ link {
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
     width: 800px;
 }
 
@@ -61,10 +77,34 @@ link {
     flex: 1;
     display: block;
     clear: both;
+    margin-top: -40px;
 }
 
-.movie-rating {
-    padding-left: 50px;
+.movie-rating-container {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.movie-rating { 
+    margin: 15px 0px 15px 0px;
+    padding: 10px;
+    height: 70px;
+    width: 150px;
+    background-color: rgb(172, 0, 0);
+    border-style: solid;
+    border-radius: 1px;
+    border-color: black;
+}
+
+.movie-rating img {
+    width: 20px;
+    height: 20px;
+    border-color: rgb(172, 0, 0);
+}
+
+.overall-rating img {
+    width: 25px;
+    height: 25px;
 }
 
 .movie h2 {
@@ -116,14 +156,40 @@ link {
     color: red;
 }
 
+.user-rating {
+    margin-top: 2px;
+}
+
 .picture-container {
     float: left;
     display: inline;
 }
 
+.profile-container {
+    position: relative;
+}
+
+.trash-icon {
+    background-image: url("../Media/trash.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 4px;
+    margin-right: 6px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.trash-icon:hover {
+    background-image: url("../Media/trashHover.png");
+}
+
 .picture-container img {
     height: 50px;
     width: 50x;
+    border-radius: 50%;
 }
 
 .user-container {
@@ -138,5 +204,28 @@ link {
 }
 
 .reviews p {
-    padding-left: 51px;;
+    padding-left: 53px;
+}
+
+.heart-container {
+    height: 25px;
+    margin: 10px 0px 10px 20px;
+}
+.heart-icon {
+    background-image: url("../Media/heart.png");
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.heart-icon:hover {
+    background-image: url("../Media/heartHover.png");
+}
+
+#heart-count {
+    padding-top: 3px;
+    margin-left: -22px;
+    color: yellow;
 }
