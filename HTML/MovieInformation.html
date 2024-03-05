@@ -4,7 +4,7 @@
     <title>Hereditary | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='../CSS/Design.css' rel='stylesheet'>
-    <link href='../CSS/Movies and Shows.css' rel='stylesheet'>
+    <link href='../CSS/MovieInformation.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="/JS/MovieInformation.js"></script>
 </head>
@@ -61,7 +61,7 @@
             <div class="right-main">
                 <div class="movie">
                     <div class="movie-info">
-                        <h2 id="movie-title">Hereditary</h2>
+                        <h2 id="movie-title"> Hereditary </span></h2>
                         <p id="release-date"> Release Date: 2023<p>
                         <p id="director">Director: Ari Aster </p>
                         <p id="cast">Cast: Toni Collette, Milly Shapiro, Gabriel Byrne</p>
@@ -79,16 +79,30 @@
                     </div>
                 </div>
 
+                <div class="delete-modal" id="delete-modal">
+                    <div class="delete-container"> 
+                        <div class="closeModal"></div> 
+                        <div class="delete-header">
+                            <img src="../Media/delete.png" width="40px" height="40px">
+                        </div>
+                        <div class="delete-content"> 
+                            <p> Are you sure you wanna delete your review? </p>
+                        </div>
+                        <div class="delete-footer"> 
+                            <button id="yes-btn" class="yes-btn"> Yes </button> 
+                            <button id="no-btn" class="no-btn"> No </button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="review-container">
                     <div class="reviews-collection">
                         <hr> <br>
-                        <span style="-webkit-text-stroke: 1px black;"> <h2>User Reviews</h2> </span>
+                        <h2>User Reviews</h2>
 
-                        <div class="user-review">
-                                <div class="profile-container"> 
-                                    <div class="delete-container">
+                        <div class="user-review">                        
+                                <div class="profile-container">                          
                                         <div class="trash-icon"> </div>
-                                    </div>
                                     <div class="picture-container"> <img src="../Media/PFP-Moon.jpg"> </div>
                                     <div class="user-container"> 
                                         <a href="../HTML/UserProfile.html"> <h3 id="username"> bonitofsh </h3> </a> 
@@ -100,30 +114,31 @@
                                 </div>
                             
                             <div class="reviews"> 
-                                <p id="review-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                                <p id="review-content">This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.</p> 
                                 <div class="heart-container">
                                     <div class="heart-icon"> </div> <p id="heart-count"> 100 Likes </p> 
                                 </div>
                             </div>
-                            
-
                         </div>
-
                         <div class="user-review">
-                            <div class="review-header">
-                                <div class="profile-container"> 
-                                    <div class="picture-container"> <img src="../Media/PFP-Moon.jpg"> </div>
-                                    <div class="user-container"> 
-                                        <a href="../HTML/UserProfile.html"> <h3> bonitofsh </h3> </a> 5/5
+                            <div class="profile-container">                          
+                                    <div class="trash-icon"> </div>
+                                <div class="picture-container"> <img src="../Media/PFP-Moon.jpg"> </div>
+                                <div class="user-container"> 
+                                    <a href="../HTML/UserProfile.html"> <h3 id="username"> bonitofsh </h3> </a> 
+                                    
+                                    <div class="user-rating"> 
+                                        <img src="../Media/starSolid.png" height="15px" width="15px"> <img src="../Media/starSolid.png" height="15px" width="15px"> <img src="../Media/starSolid.png" height="15px" width="15px"> <img src="../Media/starSolid.png" height="15px" width="15px"> <img src="../Media/starSolid.png" height="15px" width="15px">
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="reviews"> 
-                                <p>This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.</p> 
+                        
+                        <div class="reviews"> 
+                            <p id="review-content">This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.</p> 
+                            <div class="heart-container">
+                                <div class="heart-icon"> </div> <p id="heart-count"> 100 Likes </p> 
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

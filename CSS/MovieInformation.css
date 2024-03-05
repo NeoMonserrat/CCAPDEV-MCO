@@ -1,0 +1,331 @@
+main {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.background-container {
+    width: 100%;
+    height: 399px;
+    background: 
+        url("../Media/Background/overlay.png") no-repeat center/cover, 
+        url("../Media/Background/Hereditary.jpg") no-repeat center/cover;
+}
+
+.delete-modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation-name: deletefade;
+    animation-duration: 0.2s
+}
+
+@keyframes deletefade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.delete-modal.show {
+    display: flex;
+}
+
+.closeModal {
+    background-image: url("../Media/close2.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.closeModal:hover {
+    background-image: url("../Media/close2Hover.png");
+}
+
+
+.delete-header {
+    transform: translate(0%, 50%);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.delete-container {
+    display: flex;
+    position: relative;
+    background-color: #141414;
+    width: 35%;
+    height: 25%;
+    z-index: 2;
+}
+
+.delete-content {
+    display: flex;
+    border: 1px solid rgb(137, 22, 22);
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
+
+.delete-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.delete-footer button {
+    border-style: solid;
+    cursor: pointer;
+    margin: 25px 35px 25px 35px;
+    height: 20px;
+    width: 45px;
+}
+
+.delete-footer button:hover {
+    border-color: white;
+    color: white;
+}
+
+.yes-btn {
+    background-color: green;
+}
+
+.no-btn {
+    background-color: red;
+}
+
+.main-container {
+    display: flex;
+    max-width: 100%;
+}
+
+.poster {
+    top: 0;
+    margin-left: 10px;
+    position: sticky;
+    height: 400px;
+    width: 200px;
+    z-index: 1;
+}
+
+.poster a {
+    color: white;
+}
+
+#movie-poster {
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#netflix-logo {
+    height: 20px;
+    width: 15px;
+    padding-bottom: 5px;
+    display: block;
+    margin: 2px 4px 2px 2px;
+}
+
+link {
+    margin: 5px;
+}
+
+.poster ul {
+    list-style-type: none;
+}
+
+.poster li {
+    padding: 5px 5px;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+.right-main {
+    flex: 85%;
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px 20px 0px 20px;
+    width: 800px;
+}
+
+.movie-info {
+    flex: 1;
+    display: block;
+    clear: both;
+    margin-top: -40px;
+}
+
+.movie-rating-container {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.movie-rating { 
+    margin: 15px 0px 15px 0px;
+    padding: 10px;
+    height: 70px;
+    width: 150px;
+    background-color: rgb(172, 0, 0);
+    border-style: solid;
+    border-radius: 1px;
+    border-color: black;
+}
+
+.movie-rating img {
+    width: 20px;
+    height: 20px;
+    border-color: rgb(172, 0, 0);
+}
+
+.overall-rating img {
+    width: 25px;
+    height: 25px;
+}
+
+.movie h2 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.movie p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+.movie p strong {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.review-container {
+    background-color: #141414;
+    padding: 10px;
+    width: 1000px;
+    max-width: 1000px;
+    clear: both;
+}
+
+.reviews-collection {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.user-review {
+    background-color: rgb(201, 34, 34);
+    border-radius: 10px;
+    border-style: solid;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    margin-top: 20px;
+    
+}
+
+.user-review a {
+    -webkit-text-stroke: 0.2px white;
+    color: black;
+}
+
+.user-review a:hover {
+    color: red;
+}
+
+.user-rating {
+    margin-top: 2px;
+}
+
+.picture-container {
+    float: left;
+    display: inline;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.trash-icon {
+    background-image: url("../Media/trash.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 4px;
+    margin-right: 6px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.trash-icon:hover {
+    background-image: url("../Media/trashHover.png");
+}
+
+.picture-container img {
+    height: 50px;
+    width: 50x;
+    border-radius: 50%;
+}
+
+.user-container {
+    float: left;
+    margin: 5px;
+}
+
+.reviews {
+    clear: both;
+    margin: 3px;
+    text-align: left;
+}
+
+.reviews p {
+    padding-left: 53px;
+}
+
+.heart-container {
+    height: 25px;
+    margin: 10px 0px 10px 20px;
+}
+.heart-icon {
+    background-image: url("../Media/heart.png");
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.heart-icon:hover {
+    background-image: url("../Media/heartHover.png");
+}
+
+#heart-count {
+    padding-top: 3px;
+    margin-left: -22px;
+    color: yellow;
+}

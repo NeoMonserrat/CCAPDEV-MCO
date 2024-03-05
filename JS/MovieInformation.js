@@ -2,11 +2,7 @@ function showMovieInfo(movieTitle) {
     window.location.href = `MovieInformation.html?title=${encodeURIComponent(movieTitle)}`;
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const movieTitle = localStorage.getItem("movieTitle");
-    
-    // Checking if title is null
+function verifyTitle(movieTitle) {
     if (movieTitle) {
         const movieData = getMovieData(movieTitle);
         
@@ -34,7 +30,36 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("cast").innerText = ``;
         document.getElementById("synopsis").innerText = ``;
     }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const movieTitle = localStorage.getItem("movieTitle");
+    
+    // Checking if title is null
+    verifyTitle(movieTitle);
+
+    var trashContainer = document.querySelector('.reviews-collection');
+    trashContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('trash-icon')) {
+            var userReview = event.target.closest('.user-review');
+            if (userReview) {
+                var deleteModal = document.querySelector(".delete-modal");
+                var closeModal = document.querySelector(".closeModal");
+                if (deleteModal) {
+                    deleteModal.classList.add("show");
+                }
+
+                window.onclick = function(event) {
+                    if (event.target == deleteModal || event.target == closeModal) {
+                        deleteModal.classList.remove("show");
+                    }
+                  }
+
+            }
+        }
+    });
 });
+
 
 
 function getMovieData(movieTitle) {

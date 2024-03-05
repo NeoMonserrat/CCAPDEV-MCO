@@ -16,6 +16,7 @@ nav {
     font-size: 20px;
     border-bottom-color: rgba(255, 0, 0, 0.9);;
     border-bottom-style: solid;
+    z-index: 2;
 }
 
 .menu {
@@ -80,6 +81,7 @@ nav a:hover,
     height: 100px;
     transition: .5s ease;
     backface-visibility: hidden;
+    z-index: 1;
 } 
 
 .profile-container{
