@@ -7,6 +7,10 @@
     font-family: sans-serif;
 }
 
+img {
+    user-select: none;
+}
+
 a:link {
     text-decoration: none!important;
     color: white;
@@ -77,7 +81,7 @@ nav {
     margin-bottom: 80px;
 }
 
-.netflix-containe hr {
+.netflix-container hr {
     width: 85%;
     margin: auto;
 }

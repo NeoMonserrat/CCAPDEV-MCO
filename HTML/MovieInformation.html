@@ -6,7 +6,8 @@
     <link href='../CSS/Design.css' rel='stylesheet'>
     <link href='../CSS/MovieInformation.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="/JS/MovieInformation.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
     <header>
@@ -70,7 +71,14 @@
                     <div class="movie-rating-container"> 
                         <div class="movie-rating" id="movie-rating"> 
                             <h3> Your Rating: </h2>
-                            <img src="../Media/star.png"> <img src="../Media/star.png"> <img src="../Media/star.png"> <img src="../Media/star.png"> <img src="../Media/star.png"> 
+                            <div class="stars">
+                                <box-icon name='star' class="star" color="yellow"></box-icon>
+                                <box-icon name='star' class="star" color="yellow"></box-icon>
+                                <box-icon name='star' class="star" color="yellow"></box-icon>
+                                <box-icon name='star' class="star" color="yellow"></box-icon>
+                                <box-icon name='star' class="star" color="yellow"></box-icon>
+                            </div>
+                            <p> <span id="your-rating"></span> of 5</p>
                         </div>
 
                         <h3> Overall Rating: </h3>
@@ -96,10 +104,9 @@
                 </div>
 
                 <div class="review-container">
+                    <hr> <br>
+                    <h2>User Reviews</h2>
                     <div class="reviews-collection">
-                        <hr> <br>
-                        <h2>User Reviews</h2>
-
                         <div class="user-review">                        
                                 <div class="profile-container">                          
                                         <div class="trash-icon"> </div>
@@ -116,10 +123,11 @@
                             <div class="reviews"> 
                                 <p id="review-content">This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.</p> 
                                 <div class="heart-container">
-                                    <div class="heart-icon"> </div> <p id="heart-count"> 100 Likes </p> 
+                                    <div class="heart-icon"> </div> <p class="like-container"> <span class="like-counter">100</span> Likes </p> 
                                 </div>
                             </div>
                         </div>
+
                         <div class="user-review">
                             <div class="profile-container">                          
                                     <div class="trash-icon"> </div>
@@ -136,10 +144,11 @@
                         <div class="reviews"> 
                             <p id="review-content">This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.</p> 
                             <div class="heart-container">
-                                <div class="heart-icon"> </div> <p id="heart-count"> 100 Likes </p> 
+                                <div class="heart-icon"> </div> <p class="like-container"> <span class="like-counter">100</span> Likes </p> 
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -178,5 +187,6 @@
             </ul>
         </div>
     </footer>
+    <script src="/JS/MovieInformation.js"></script>
 </body>
 </html>

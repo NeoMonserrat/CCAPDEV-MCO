@@ -188,7 +188,7 @@ link {
 .movie-rating { 
     margin: 15px 0px 15px 0px;
     padding: 10px;
-    height: 70px;
+    height: 100px;
     width: 150px;
     background-color: rgb(172, 0, 0);
     border-style: solid;
@@ -196,10 +196,13 @@ link {
     border-color: black;
 }
 
-.movie-rating img {
+.star {
     width: 20px;
     height: 20px;
-    border-color: rgb(172, 0, 0);
+}
+
+.stars box-icon:hover{
+    cursor: pointer;
 }
 
 .overall-rating img {
@@ -232,8 +235,10 @@ link {
 }
 
 .reviews-collection {
+    position: relative;
     border-radius: 10px;
     padding: 10px;
+    min-height: 300px;
 }
 
 .user-review {
@@ -311,6 +316,7 @@ link {
     height: 25px;
     margin: 10px 0px 10px 20px;
 }
+
 .heart-icon {
     background-image: url("../Media/heart.png");
     position: absolute;
@@ -320,11 +326,16 @@ link {
     background-size: cover;
 }
 
-.heart-icon:hover {
+.heart-icon.liked{
     background-image: url("../Media/heartHover.png");
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-size: cover;
 }
 
-#heart-count {
+.like-container {
     padding-top: 3px;
     margin-left: -22px;
     color: yellow;
