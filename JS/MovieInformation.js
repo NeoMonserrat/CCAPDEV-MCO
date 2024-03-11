@@ -2,11 +2,7 @@ function showMovieInfo(movieTitle) {
     window.location.href = `MovieInformation.html?title=${encodeURIComponent(movieTitle)}`;
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const movieTitle = localStorage.getItem("movieTitle");
-    
-    // Checking if title is null
+function verifyTitle(movieTitle) {
     if (movieTitle) {
         const movieData = getMovieData(movieTitle);
         
@@ -34,7 +30,95 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("cast").innerText = ``;
         document.getElementById("synopsis").innerText = ``;
     }
+}
+
+function updateRating(stars, index1) {
+    console.log(index1);
+    stars.forEach((star, index2) => {
+        index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+        index1 >= index2 ? star.setAttribute("type", "solid") : star.setAttribute("type", "regular")
+    });
+    
+    //Star rating value
+    let rating = index1 + 1;
+    document.querySelector('#your-rating').textContent = rating;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const movieTitle = localStorage.getItem("movieTitle");
+    
+    //Checking if title is null
+    verifyTitle(movieTitle);
+
+    var container = document.querySelector('.reviews-collection');
+
+    container.addEventListener('click', function(event) {
+
+        //Shows Delete Modal
+        if (event.target.classList.contains('trash-icon')) {
+            var userReview = event.target.closest('.user-review');
+            if (userReview) {
+                var deleteModal = document.querySelector(".delete-modal");
+                var closeModal = document.querySelector(".closeModal");
+                if (deleteModal) {
+                    deleteModal.classList.add("show");
+                }
+
+                //Closes Delete Modal
+                window.onclick = function(event) {
+                    if (event.target == deleteModal || event.target == closeModal) {
+                        deleteModal.classList.remove("show");
+                    }
+                }
+
+                deleteModal.querySelector('.yes-btn').addEventListener('click', function() {
+                    userReview.remove();
+                    deleteModal.classList.remove("show");
+                    fillUserReview(container);
+                });
+
+            }
+        }
+
+        //Like Counter
+        if (event.target.classList.contains('heart-icon')) {
+            const likeContainer = event.target.closest('.heart-container');
+            const likeImgContainer = event.target.closest('.heart-icon');
+            if (likeContainer) {
+                var likeElement = likeContainer.querySelector(".like-counter");
+                var likeCount = parseInt(likeElement.textContent);
+                if(!likeImgContainer.classList.contains('liked')) {
+                    likeElement.textContent = likeCount+1;
+                    likeImgContainer.classList.add('liked');
+                }
+                else {
+                    likeImgContainer.classList.remove('liked');
+                    likeElement.textContent = likeCount-1;
+                }
+            }
+        }
+    });
+
+    //Handles Star Rating
+    const stars = document.querySelectorAll('.star');
+    stars.forEach((star, index1) => {
+        star.addEventListener("click", function() {
+            updateRating(stars, index1)
+        });
+    })
 });
+
+//Empty User Reviews Placeholder
+function fillUserReview(container) {
+    var containerLength = container.childElementCount;
+    if(containerLength === 0) {
+        const placeholder = 
+                                "<h1 style='display: flex; justify-content: center; align-items: center; margin-top: 75px;'>" + 
+                                    "No one has reviewed this program yet!" + 
+                                "</h1>";
+        container.innerHTML = placeholder;
+    }
+}
 
 
 function getMovieData(movieTitle) {

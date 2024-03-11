@@ -19,6 +19,15 @@
     padding-bottom: 20px;
 }
 
+.forum-section a {
+    color: black;
+}
+
+.forum-section h3:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
 .forum-section:last-child {
     border-bottom: none;
 }

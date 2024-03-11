@@ -1,5 +1,6 @@
 function verify() {
-    if(!username) {
+    var username = "Hello";
+    if(username) {
         if(!email) {
             
         }
