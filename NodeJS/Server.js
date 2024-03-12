@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'CCAPDEV-MCO')));
-
+ 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../HTML/index.html"));
 });
