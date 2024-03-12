@@ -44,11 +44,8 @@
 
             <div class="content"> 
                 <div class="content-container">
-                    <div class="profile-container">
-                        <a href="testfilelink">
-                            <img src="../Media/PFP-Moon.jpg" alt="Profile Picture" class="profile-picture">
-                        </a>
-                        
+                    <div class="profile-container"  role="button" onclick="showChangeProfilePicModal()">
+                        <img src="../Media/PFP-Moon.jpg" alt="Profile Picture" class="profile-picture">
                         <div class="profile-transition">
                             <div class="edit-prompt">Edit</div>
                         </div>
@@ -57,12 +54,12 @@
                         <div class ="username-container">
                             <div class="username-label">Username:</div>
                             <div class="username">bonitofsh</div>
-                            <span class="change-username"><a>Change username</a></span>
+                            <span class="change-username" role="button" onclick="showChangeUsernameModal() "><a>Change username</a></span>
                         </div>
                         <div class ="password-container">
                             <div class="password-label">Password:</div>
                             <div class="password">*****</div>
-                            <span class="change-password"><a>Change password</a></span>
+                            <span class="change-password" role="button" onclick="showChangePasswordModal()"><a>Change password</a></span>
                         </div>
                     </div>
                     
@@ -108,5 +105,41 @@
                 </div>
             </div>
         </div>
+        <br><br>
+    <footer>
+        <div class="left_pillar"> 
+            <ul class="left_ul">  
+                <h3>Netboxd</h3>
+                <li> <a href="../HTML/index.html"> Home </a></li>
+                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
+                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
+            </ul>
+        </div>
+
+         <div class="center_pillar"> 
+            <div class="social_media">
+                <h3>Social Media</h3>
+            </div>
+             <div class="social_icons">
+                <ul>  
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+             </div>   
+        </div>
+        
+        <div class="right_pillar"> 
+            <ul class="right_ul">  
+                <h3>More Contacts</h3>
+                <li> Email: Netboxd@gmail.com</li>
+                <li> Tel: 1234-5678</a></li>
+            </ul>
+        </div>
+    </footer>
+
     </body>
+    <script src="../JS/UserProfile.js"></script>
 </html>
