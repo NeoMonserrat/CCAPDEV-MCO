@@ -1,61 +1,52 @@
 .create-post-container {
-    max-width: 800px;
-    margin: 0.5px auto;
+    max-width: 1000px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: black;
-    height: 650px;
+    background-color: #f9f9f9;
 }
 
-.create-post-container h1 {
+h1 {
+    color: black;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 label {
+    color: black;
     display: block;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.create-post-container [type="text"],
-textarea {
+input[type="text"],
+select,
+textarea,
+input[type="date"] {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
     resize: vertical;
 }
 
-.form-group .button {
+button {
     padding: 10px 20px;
-    background-color: red;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #83161f;
-}
-
-.signup {
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-.signup:hover {
-    color: red;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
+    background-color: #45a049;
 }

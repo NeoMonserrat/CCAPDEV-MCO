@@ -1,17 +1,17 @@
-$(document).ready(function() {
-    var postData = {
-        title: "New Post Title",
-        category: "General Discussions",
-        body: "This is the body of the new post."
-    };
+$(document).ready(function () {
+        $("#create-post-form").submit(function (event) {
+            event.preventDefault(); 
 
+            
+            var postData = {
+                title: $("#post-title").val(),
+                category: $("#post-category").val(),
+                content: $("#post-content").val(),
+                date: $("#post-date").val()
+            };
 
-    var newPost = `
-        <div class="gen-discussion">
-            <h3><a href="#">${postData.title}</a></h3>
-            <p>${postData.body}</p>
-        </div>
-    `;
+            var queryString = $.param(postData);
+            window.location.href = "Forums.html?" + queryString;
+        })
 
-    $(".forum-section:contains('General Discussions')").append(newPost);
-});
+}
