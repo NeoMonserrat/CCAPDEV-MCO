@@ -140,6 +140,11 @@ document.addEventListener("DOMContentLoaded", function() {
             setSubmitButtonOnclick(submitEnable); // Update onclick attribute based on submitEnable
         });
     })
+
+    const submitButton = document.getElementById('submit-btn2');
+    submitButton.addEventListener("click", handleReviewSubmission);
+    
+    window.addEventListener("click", closeModalHandler);
 });
 
 function setSubmitButtonOnclick(submitEnable){
@@ -152,50 +157,72 @@ function setSubmitButtonOnclick(submitEnable){
 }
 
 function showReviewModal() {
+    var reviewModal = document.querySelector(".review-modal");
+    if (reviewModal) {
+        reviewModal.classList.add("show");
+    }
+}
+
+function handleReviewSubmission() {
     var reviewCollection = document.querySelector('.reviews-collection');
     const reviewTemplate = document.getElementById('review-template');
     var reviewModal = document.querySelector(".review-modal");
-    var reviewContainer = document.querySelector(".review-modal-container");
-    var closeModal = reviewModal.querySelector(".closeModal");
-    var submitButton = reviewModal.querySelector("#submit-btn2"); //fix!
     var writtenReview;
     const errorPopup = document.getElementById("errorPopup");
     const checkBox = reviewModal.querySelector('#checkbox');
     const textBox = reviewModal.querySelector('#reviewTextbox');
-    if (reviewModal) {
-        reviewModal.classList.add("show");
+    
+    if (checkBox.checked) {
+        writtenReview = true;
+    } else {
+        writtenReview = false;
     }
 
-    //Closes Review Modal
-    function closeModalHandler(event) {
-        if (event.target == reviewModal || event.target == closeModal) {
-            reviewModal.classList.remove("show");
-            window.removeEventListener("click", closeModalHandler);
-        }
-    }
-    window.addEventListener("click", closeModalHandler);
-
-    submitButton.addEventListener("click", function() {
-        if (checkBox.checked) {
-            writtenReview = true;
-            } else {
-            writtenReview = false;
-            }
-
-        if(verifyReview(textBox, writtenReview)) {
-            closeErrorPopup();
-            if(writtenReview) {
-                const cloneReview = reviewTemplate.cloneNode(true);
-                cloneReview.classList.remove('hide');
-                reviewCollection.append(cloneReview);
-            } else {
-                textBox.value = "";
-                console.log("review made");
-            }
+    if(verifyReview(textBox, writtenReview)) {
+        closeErrorPopup();
+        if(writtenReview) {
+            const cloneReview = reviewTemplate.cloneNode(true);
+            cloneReview.classList.remove('hide');
+            reviewCollection.append(cloneReview);
+            console.log(cloneReview.querySelector('.review-content-text').innerText, textBox.value)
+            cloneReview.querySelector('.review-content-text').innerText = textBox.value;
+            cloneReview.querySelector('.like-counter').innerText = 0;
+            addStars(cloneReview);  
+            textBox.value = "";
         } else {
-            showErrorPopup();
+            textBox.value = "";
+            console.log("review made");
         }
-    });
+    } else {
+        showErrorPopup();
+    }
+}
+
+//Adds star images
+function addStars(ratingNode) {
+    
+    var numStars = document.querySelector('#your-rating').textContent;
+    const ratingContainer = ratingNode.querySelector(".user-rating");
+    ratingContainer.innerHTML = '';
+    // Add stars based on rating
+    for (var i = 0; i < numStars; i++) {
+        var starImg = document.createElement("img");
+        starImg.src = "../Media/starSolid.png";
+        starImg.height = 15;
+        starImg.weight = 15;
+        starImg.style.marginRight = "3.8px";
+        console.log(ratingContainer.appendChild(starImg));
+        ratingContainer.appendChild(starImg);
+    }
+}
+
+//Closes Review Modal
+function closeModalHandler(event) {
+    var reviewModal = document.querySelector(".review-modal");
+    var closeModal = reviewModal.querySelector(".closeModal");
+    if (event.target == reviewModal || event.target == closeModal) {
+        reviewModal.classList.remove("show");
+    }
 }
 
 function toggleReviewTextarea() {
@@ -266,7 +293,7 @@ function updateTags(movieData) {
     const movieType = document.querySelectorAll('.tags');
     const movieGenre = document.getElementById('genre');
     const tagsList = document.getElementById('tags-list');
-    var allGenres = ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Sci-Fi", "Supernatural", "Thriller", "Western"];
+    var allGenres = ["Action", "Adventure", "Animated", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Sci-Fi", "Supernatural", "Thriller", "Western"];
 
     // Update tags
     for (let i = 0; i < movieType.length; i++) {
@@ -287,4 +314,3 @@ function updateTags(movieData) {
         }
     });
 }
-

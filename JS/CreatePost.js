@@ -1,7 +1,8 @@
 $(document).ready(function () {
         $("#create-post-form").submit(function (event) {
-            event.preventDefault();
+            event.preventDefault(); 
 
+            
             var postData = {
                 title: $("#post-title").val(),
                 category: $("#post-category").val(),
@@ -10,7 +11,7 @@ $(document).ready(function () {
             };
 
             var queryString = $.param(postData);
-
             window.location.href = "Forums.html?" + queryString;
-        });
-    });
+        })
+
+}
