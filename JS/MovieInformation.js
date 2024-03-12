@@ -167,9 +167,6 @@ function handleReviewSubmission() {
     var reviewCollection = document.querySelector('.reviews-collection');
     const reviewTemplate = document.getElementById('review-template');
     var reviewModal = document.querySelector(".review-modal");
-    var reviewContainer = document.querySelector(".review-modal-container");
-    var closeModal = reviewModal.querySelector(".closeModal");
-    var submitButton = reviewModal.querySelector("#submit-btn2"); //fix!
     var writtenReview;
     const errorPopup = document.getElementById("errorPopup");
     const checkBox = reviewModal.querySelector('#checkbox');
@@ -186,8 +183,11 @@ function handleReviewSubmission() {
         if(writtenReview) {
             const cloneReview = reviewTemplate.cloneNode(true);
             cloneReview.classList.remove('hide');
-            reviewCollection.insertBefore(cloneReview);
+            reviewCollection.append(cloneReview);
+            console.log(cloneReview.querySelector('.review-content-text').innerText, textBox.value)
             cloneReview.querySelector('.review-content-text').innerText = textBox.value;
+            cloneReview.querySelector('.like-counter').innerText = 0;
+            addStars(cloneReview);  
             textBox.value = "";
         } else {
             textBox.value = "";
@@ -195,6 +195,24 @@ function handleReviewSubmission() {
         }
     } else {
         showErrorPopup();
+    }
+}
+
+//Adds star images
+function addStars(ratingNode) {
+    
+    var numStars = document.querySelector('#your-rating').textContent;
+    const ratingContainer = ratingNode.querySelector(".user-rating");
+    ratingContainer.innerHTML = '';
+    // Add stars based on rating
+    for (var i = 0; i < numStars; i++) {
+        var starImg = document.createElement("img");
+        starImg.src = "../Media/starSolid.png";
+        starImg.height = 15;
+        starImg.weight = 15;
+        starImg.style.marginRight = "3.8px";
+        console.log(ratingContainer.appendChild(starImg));
+        ratingContainer.appendChild(starImg);
     }
 }
 
@@ -275,7 +293,7 @@ function updateTags(movieData) {
     const movieType = document.querySelectorAll('.tags');
     const movieGenre = document.getElementById('genre');
     const tagsList = document.getElementById('tags-list');
-    var allGenres = ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Sci-Fi", "Supernatural", "Thriller", "Western"];
+    var allGenres = ["Action", "Adventure", "Animated", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Sci-Fi", "Supernatural", "Thriller", "Western"];
 
     // Update tags
     for (let i = 0; i < movieType.length; i++) {
@@ -296,4 +314,3 @@ function updateTags(movieData) {
         }
     });
 }
-
