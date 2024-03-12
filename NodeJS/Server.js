@@ -1,14 +1,48 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.use(express.static(path.join(__dirname, 'CCAPDEV-MCO')));
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/index.html"));
+});
+
+// movies route
+app.get("/Movies", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/Movies.html"));
 })
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+// tv shows route
+app.get("/TvShows", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/TV Shows.html"));
+})
+
+// forums route
+app.get("/Forums", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/Forums.html"));
+})
+
+// help route
+app.get("/Help", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/Help.html"));
+})
+
+// create post route
+app.get("/Createpost", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/CreatePost.html"));
+})
+
+// accountuser profile
+app.get("/UserProfile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/UserProfile.html"));
+})
+
+// signup route
+app.get("/Signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../HTML/Signup.html"));
+})
+
+app.listen(3000, function() {
+    console.log("Server starting on port 3000");
 });
