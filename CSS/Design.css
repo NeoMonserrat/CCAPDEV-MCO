@@ -52,6 +52,7 @@ nav {
     top: -1px;
     background-color: rgba(0, 0, 0, 1);
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
     border-bottom-color: rgba(255, 0, 0, 0.9);;
     border-bottom-style: solid;
 }
@@ -242,6 +243,10 @@ nav .menu a:hover,
     background-color: none;
 }
 
+.search {
+    position: relative;
+}
+
 .search-bar {
     margin-top: 10px;
     height: 25px;
@@ -249,7 +254,31 @@ nav .menu a:hover,
     border: 1px solid gray;
     border-radius: 15px;
     outline: none;
+    padding-left: 8px;
+    padding-right: 30px;
 }
+
+.search-submit {
+    background: url(../Media/Search.png) no-repeat;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 28px;
+    transform: translate(0%, 36%);
+    text-indent: -9999px;
+  }
+
+.search-submit:hover {
+    background: url(../Media/SearchHover.png) no-repeat
+}
+  
 
 .plus-icon,
 .person-icon,

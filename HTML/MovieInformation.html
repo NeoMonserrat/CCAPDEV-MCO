@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="/JS/MovieInformation.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,8 @@
             </div>
             <div class="buttons">
                 <div class="search">
-                    <input class="search-bar" type="text" placeholder=" Search...">
+                    <input class="search-bar" type="text">
+                    <input type="submit" value="search" class="search-submit">
                 </div>
                 <a class="button" href="../HTML/CreatePost.html">       
                     <div class="plus-icon"></div>
@@ -42,14 +44,14 @@
             </div>
         </nav>
 
-        <div class="background-container">
+        <div id="movie-background" class="background-container">
         </div>
     </header>
 
     <main>
         <div class="main-container">
             <div class="poster">
-                <img id="movie-poster" src="../Media/Hereditary.jpg">
+                <img id="movie-poster" src="">
                 <div class="link"> 
                     <p> Watch it here! </p>
                         <ul>
@@ -67,6 +69,15 @@
                         <p id="director">Director: Ari Aster </p>
                         <p id="cast">Cast: Toni Collette, Milly Shapiro, Gabriel Byrne</p>
                         <p id="synopsis">Synopsis: When the matriarch of the Graham family passes away, her daughter and grandchildren begin to unravel cryptic and increasingly terrifying secrets about their ancestry, trying to outrun the sinister fate they have inherited.</p>
+                            
+                        <div class="tags-container">
+                            <ul id="tags-list">
+                                <li>Tags:</li>
+                                <a href="../HTML/Movies.html"> <li class="tags movies hide">Movie</li> </a>
+                                <a href="../HTML/TV Shows.html"> <li class="tags shows hide">Show</li> </a>
+                                <li id="genre" class="tags genre hide"> </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="movie-rating-container"> 
                         <div class="movie-rating" id="movie-rating"> 
@@ -78,7 +89,8 @@
                                 <box-icon name='star' class="star" color="yellow"></box-icon>
                                 <box-icon name='star' class="star" color="yellow"></box-icon>
                             </div>
-                            <p> <span id="your-rating"></span> of 5</p>
+                            <p> <span id="your-rating">&nbsp</span> of 5</p>
+                            <button id="submit-btn" class="submit-btn" onclick="showReviewModal()">Submit</button> 
                         </div>
 
                         <h3> Overall Rating: </h3>
@@ -89,8 +101,8 @@
 
                 <div class="delete-modal" id="delete-modal">
                     <div class="delete-container"> 
-                        <div class="closeModal"></div> 
                         <div class="delete-header">
+                            <div class="closeModal"></div>
                             <img src="../Media/delete.png" width="40px" height="40px">
                         </div>
                         <div class="delete-content"> 
@@ -103,11 +115,49 @@
                     </div>
                 </div>
 
+                <div id="errorPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closeErrorPopup()">&times;</span>
+                        <h2>Wait!</h2>
+                        <p>You need to write something for the review!</p>
+                    </div>
+                </div>
+
+                <div class="review-modal" id="review-modal">
+                    <div class="review-modal-container expand"> 
+                        <div class="review-title"> 
+                            <p id="review-title-text"> </p>
+                            <div class="closeModal"></div>
+                        </div>
+                        <div class="review-header">
+                            
+                            <div class="movie-rating-container"> 
+                                    <div class="stars">
+                                        <box-icon name='star' class="star" color="yellow"></box-icon>
+                                        <box-icon name='star' class="star" color="yellow"></box-icon>
+                                        <box-icon name='star' class="star" color="yellow"></box-icon>
+                                        <box-icon name='star' class="star" color="yellow"></box-icon>
+                                        <box-icon name='star' class="star" color="yellow"></box-icon>
+                                    </div>
+                                    <p> <span id="your-rating-other">&nbsp</span> of 5</p>
+                            </div>
+                        </div>
+                        <div class="review-content"> 
+                            <textarea id="reviewTextbox" class="reviewTextbox show" rows="10" cols="100" placeholder="Write your review here..."></textarea>
+                            <input type="checkbox" id="checkbox" onchange="toggleReviewTextarea()" checked> 
+                            <label for="checkbox" id="review-prompt">Write a review</label>
+                        </div>
+                        <div class="review-footer"> 
+                            <button id="submit-btn2" class="submit-btn">Submit</button> 
+                        </div>
+                    </div>
+                </div>
+
                 <div class="review-container">
                     <hr> <br>
                     <h2>User Reviews</h2>
                     <div class="reviews-collection">
-                        <div class="user-review">                        
+                        <div class="user-review hide" id="review-template">                        
                                 <div class="profile-container">                          
                                         <div class="trash-icon"> </div>
                                     <div class="picture-container"> <img src="../Media/PFP-Moon.jpg"> </div>
@@ -187,6 +237,5 @@
             </ul>
         </div>
     </footer>
-    <script src="/JS/MovieInformation.js"></script>
 </body>
 </html>
