@@ -3,6 +3,7 @@
 <head>
     <title>Home | Netflix Reviews</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='../CSS/Home.css' rel='stylesheet'>
     <link href='../CSS/Design.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -11,7 +12,7 @@
     <header>
         <nav>
             <div class="menu">
-                <a href="../HTML/Home.html"> <img src="../Media/N-Logo.png" height="25"> </a>
+                <a href="../HTML/index.html"> <img src="../Media/N-Logo.png" height="25"> </a>
                 <div class="movies">
                     <button class="moviesbtn">Movies & Shows</button>
                     <div class="movies-content">
@@ -26,7 +27,8 @@
             </div>
             <div class="buttons">
                 <div class="search">
-                    <input class="search-bar" type="text" placeholder=" Search...">
+                    <input class="search-bar" type="text">
+                    <input type="submit" value="search" class="search-submit">
                 </div>
                 <a class="button" href="../HTML/CreatePost.html">
                     <div class="plus-icon"></div>
@@ -39,132 +41,139 @@
                 </a>
             </div>
         </nav>
+        
 
         <div class="info"> 
             <img src="../Media/background_info.jpg">
         </div>
     </header>
     <main>
-    <br><br><br>  
-    <h2><span class="main_text"> Popular Movies in Netflix </span> </h2> <hr> <br>
-        <div class="MovieCollection" id="movie-collection">
-            <ul>
-                <li>
-                <div class="container" data-title="Hereditary" id="movieOne"> 
-                    <img src="../Media/Hereditary.jpg"> 
-                    <div class="overlay"> Hereditary </div>
-                </div> 
-                </li>
-
-                <li>
+        <div class="netflix-container">
+            <h2><span class="main_text"> Popular Movies in Netflix </span> </h2> <hr>
+            
+            <div class="netflix-collection" id="movie-collection">
+                <ul>
+                    <li>
                     <div class="container" data-title="Hereditary" id="movieOne"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/BirdBox.jpg?raw=true"> 
-                        <div class="overlay"> Bird Box </div>
+                        <img src="../Media/Hereditary.jpg"> 
+                        <div class="overlay"> 
+                            <div class="likeCounter"> <img class="heart-image" src="../Media/heartHover.png"> <h3 id="like-counter"> 50 </h3> </div>
+                            <p id="movie-title"> Hereditary </p>
+                        </div>
                     </div> 
-                </li>
+                    </li>
 
-                <li>
-                    <div class="container" data-title="Hereditary" id="movieOne"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/KnivesOut.jpg?raw=true"> 
-                        <div class="overlay"> Knives Out </div>
-                    </div> 
-                </li>
+                    <li>
+                        <div class="container" data-title="Hereditary" id="movieTwo"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/BirdBox.jpg?raw=true"> 
+                            <div class="overlay"> Bird Box </div>
+                        </div> 
+                    </li>
 
-                <li>
-                    <div class="container" data-title="Hereditary" id="movieOne"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Parasite.jpg?raw=true"> 
-                        <div class="overlay"> Parasite </div>
-                    </div> 
-                </li>
+                    <li>
+                        <div class="container" data-title="Hereditary" id="movieThree"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/KnivesOut.jpg?raw=true"> 
+                            <div class="overlay"> Knives Out </div>
+                        </div> 
+                    </li>
 
-                <li>
-                    <div class="container" data-title="Hereditary" id="movieOne"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Extraction2.jpg?raw=true"> 
-                        <div class="overlay"> Extraction 2 </div>
-                    </div> 
-                </li>
+                    <li>
+                        <div class="container" data-title="Hereditary" id="movieFour"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Parasite.jpg?raw=true"> 
+                            <div class="overlay"> Parasite </div>
+                        </div> 
+                    </li>
 
-                <li>
-                    <div class="container" data-title="Hereditary" id="movieFive"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/AQuietPlace.jpg?raw=true"> 
-                        <div class="overlay"> A Quiet Place </div>
-                    </div> 
-                </li>
+                    <li>
+                        <div class="container" data-title="Hereditary" id="movieFive"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Extraction2.jpg?raw=true"> 
+                            <div class="overlay"> Extraction 2 </div>
+                        </div> 
+                    </li>
 
-                
-                <li>
-                    <div class="container" data-title="" id="movieSix"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/AQuietPlace.jpg?raw=true"> 
-                        <div class="overlay"> A Quiet Place </div>
-                    </div> 
-                </li>
-            </ul>
-        </div>  
-    <br><br><br><br><br><br><br><br><br><br><br><br>  
-    <h2> <span class="main_text"> Popular Shows in Netflix </span> </h2> <hr> <br>
-    
-    <div class="MovieCollection" id="show-collection">
-        <ul>
-            <li>
-                <div class="container" data-title="Stranger Things" id="showOne"> 
-                    <img src="../Media/Stranger Things.jpg"> 
-                    <div class="overlay"> Stranger Things </div>
-                </div>
-            </li>
+                    
+                    <li>
+                        <div class="container" data-title="" id="movieSix"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/AQuietPlace.jpg?raw=true"> 
+                            <div class="overlay"> A Quiet Place </div>
+                        </div> 
+                    </li>
 
-            <li>
-                    <div class="container"> 
-                        <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/You.jpg?raw=true"> 
-                        <div class="overlay"> You </div>
-                    </div> 
-            </li>
+                    <li>
+                        <div class="container" data-title="" id="movieSeven"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/AQuietPlace.jpg?raw=true"> 
+                            <div class="overlay"> A Quiet Place </div>
+                        </div> 
+                    </li>
+                </ul>
+            </div>  
+        </div>
 
-            <li>
-                <div class="container"> 
-                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/SquidGame.jpg?raw=true"> 
-                    <div class="overlay"> Squid Game </div>
-                </div> 
-            </li>
+        <div class="netflix-container">
+            <h2> <span class="main_text"> Popular Shows in Netflix </span> </h2> <hr>
 
-            <li>
-                <div class="container"> 
-                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/MoneyHeist.jpg?raw=true"> 
-                    <div class="overlay"> Money Heist </div>
-                </div> 
-            </li>
+            <div class="netflix-collection" id="show-collection">
+                <ul>
+                    <li>
+                        <div class="container" data-title="Stranger Things" id="showOne"> 
+                            <img src="../Media/Stranger Things.jpg"> 
+                            <div class="overlay"> Stranger Things </div>
+                        </div>
+                    </li>
 
-            <li>
-                <div class="container"> 
-                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Wednesday.jpg?raw=true"> 
-                    <div class="overlay"> Wednesday </div>
-                </div> 
-            </li>
+                    <li>
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/You.jpg?raw=true"> 
+                            <div class="overlay"> You </div>
+                        </div> 
+                    </li>
 
-            <li>
-                <div class="container"> 
-                    <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/HowToGetAwayWithMurder.jpg?raw=true"> 
-                    <div class="overlay"> How To Get Away With Murder </div>
-                </div> 
-            </li>
+                    <li>
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/SquidGame.jpg?raw=true"> 
+                            <div class="overlay"> Squid Game </div>
+                        </div> 
+                    </li>
 
-            <li>
-                <div class="container" data-title="Stranger Things" id="showSix"> 
-                    <img src="../Media/Stranger Things.jpg"> 
-                    <div class="overlay"> Stranger Things </div>
-                </div>
-            </li>
-        </ul>
-    </div>  
-    <br><br><br><br><br><br><br><br><br><br><br>
+                    <li>
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/MoneyHeist.jpg?raw=true"> 
+                            <div class="overlay"> Money Heist </div>
+                        </div> 
+                    </li>
+
+                    <li>
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/Wednesday.jpg?raw=true"> 
+                            <div class="overlay"> Wednesday </div>
+                        </div> 
+                    </li>
+
+                    <li>
+                        <div class="container"> 
+                            <img src="https://github.com/NeoMonserrat/CCAPDEV-MCO/blob/main/Media/HowToGetAwayWithMurder.jpg?raw=true"> 
+                            <div class="overlay"> How To Get Away With Murder </div>
+                        </div> 
+                    </li>
+
+                    <li>
+                        <div class="container" data-title="Stranger Things" id="showSix"> 
+                            <img src="../Media/Stranger Things.jpg"> 
+                            <div class="overlay"> Stranger Things </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>  
+        </div>
     </main>
 
     <footer>
         <div class="left_pillar"> 
             <ul class="left_ul">  
                 <h3>Netboxd</h3>
-                <li> <a href="../HTML/Home.html"> Home </a></li>
-                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
-                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
+                <li><a href="../HTML/index.html"> Home </a></li>
+                <li><a href="../HTML/MovieInformation.html"> Movies Information </a></li>
+                <li><a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
             </ul>
         </div>
 
@@ -174,7 +183,7 @@
             </div>
              <div class="social_icons">
                 <ul>  
-                    <li><a href="#"><i class="facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
@@ -192,5 +201,6 @@
         </div>
     </footer>
     <script src="/JS/Home.js"></script>
-    </body>
+
+</body>
 </html>
