@@ -1,58 +1,54 @@
 .help-content {
+    background-color: #f9f9f9;
     max-width: 800px;
-    margin: 0 auto;
+    height: 700px;
+    margin: 20px auto;
     padding: 20px;
-     height: 800px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    color: #333; 
 }
-  
-h1, h2 {
-    padding-top: 50px;
+
+.FAQ,
+.Contacts {
+    color: #333;
+    background-color: #d8d8d8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-content h1,
+.help-content h2 {
+    margin-top: 0; 
     letter-spacing: 1px;
-    color: white;
     margin-bottom: 10px;
 }
-  
-p {
+
+.help-content p {
     margin-bottom: 15px;
 }
-  
-.FAQ {
+
+.help-content .FAQ {
     margin-bottom: 30px;
 }
-  
-.Contacts {
+
+.help-content .Contacts {
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
 
-.FAQ ul,
-.Contacts ul {
+.help-content ul {
     list-style: none;
+    padding-left: 0;
 }
-  
-.FAQ ul li,
-.Contacts ul li {
+
+.help-content ul li {
     margin-bottom: 10px;
 }
 
-.FAQ ul li strong,
-.Contacts ul li  strong{
+.help-content ul li strong {
     letter-spacing: 1px;
     margin-bottom: 10px;
-}
-
-.signup {
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-.signup:hover {
-    color: red;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
 }
