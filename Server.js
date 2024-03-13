@@ -66,6 +66,7 @@ app.post('/Login', async (req, res) => {
 
         // If user exists and password is correct, redirect to the home page
         res.redirect('/'); // Redirect to the home page
+
     } catch (err) {
         console.error(err); // Log any errors
         res.status(500).send('Internal Server Error'); // Send an error response
@@ -118,10 +119,15 @@ app.get("/Login", function(req, res) {
     res.render("Login", { errorMessage: null }); // Pass null as errorMessage initially
 });
 
-// movie information route
-app.get("/Movieinformation", function(req, res) {
-    res.sendFile(__dirname + "/HTML/MovieInformation.html");
-})
+// Route to serve MovieInformation.html with custom title
+app.get('/MovieInformation.html', (req, res) => {
+    // Extract the title from the query parameter
+    const title = req.query.title || 'DefaultTitle';
+    // Construct the file path based on the title
+    const filePath = path.join(__dirname, 'public', 'MovieInformation.html');
+    // Send the HTML file
+    res.sendFile(filePath);
+});
 
 // admin route
 app.get("/Admin", function(req, res) {
