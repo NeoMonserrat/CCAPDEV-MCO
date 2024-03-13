@@ -49,6 +49,11 @@ app.get("/Movieinformation", function(req, res) {
     res.sendFile(__dirname + "/HTML/Signup.html");
 })
 
+//404 page
+app.use((req, res) => {
+    res.status(404).sendFile(__dirname + "/HTML/404.html");
+});
+
 app.listen(3000, function() {
     console.log("Server starting on port 3000");
 });
