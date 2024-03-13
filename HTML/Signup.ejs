@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="../CSS/MovieInformation.css">
 </head>
 <body>
-    <div id="errorPopup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closeErrorPopup()">&times;</span>
-            <h2>Error!</h2>
-            <% if (typeof errorMessage !== 'undefined') { %>
+    <% if (errorMessage) { %> <!-- Check if errorMessage exists -->
+        <div id="errorPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeErrorPopup()">&times;</span>
+                <h2>Error!</h2>
                 <p><%= errorMessage %></p>
-            <% } %>
+            </div>
         </div>
-    </div>
+    <% } %>
     
     <div class="container">
         <div class="left_container">
@@ -45,26 +45,27 @@
             
             <div class="bottom_pillar">
                 <p>Already have an account? <a href="/Login">Log in</a></p>
-                <% if (typeof errorMessage !== 'undefined') { %>
+                <% if (errorMessage) { %>
                     <span id="errorMessage" style="color: red";><%= errorMessage %></span>
                 <% } %>
             </div>
         </div>
     </div>
     <script>
-        if(errorMessage) {
-            showErrorPopup();
-        }
-
-        // Function to show the error popup
+        // Function to show the error popup if errorMessage exists
         function showErrorPopup() {
             errorPopup.style.display = "block";
         }
 
+        // Function to close the error popup
         function closeErrorPopup() {
             errorPopup.style.display = "none";
         }
 
+        // Check if errorMessage exists and call showErrorPopup function
+        if(errorMessage) {
+            showErrorPopup();
+        }
     </script>
 </body>
 </html>

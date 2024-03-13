@@ -180,6 +180,11 @@ nav .menu a:hover,
     align-items: center;
 }
 
+.buttons a {
+    text-decoration: none;
+}
+
+
 .signup:hover {
     color: white;
     background-color: rgba(100, 0, 0, 0.90);

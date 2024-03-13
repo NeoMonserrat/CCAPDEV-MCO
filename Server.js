@@ -21,12 +21,6 @@ app.set('views', path.join(__dirname, 'HTML'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
 
-//add user through Mongo
-// signup route (GET)
-app.get("/Signup", function(req, res) {
-    res.render("Signup"); // Rendering Signup.ejs
-});
-
 // signup route (POST)
 app.post('/Signup', async (req, res) => {
 
@@ -57,6 +51,26 @@ app.post('/Signup', async (req, res) => {
     }
 });
 
+// login route (POST)
+app.post('/Login', async (req, res) => {
+    const { username, password } = req.body;
+
+    try {
+        // Check if the user exists in the database
+        const user = await User.findOne({ username });
+
+        // If user is not found or password is incorrect, render login page with error message
+        if (!user || user.password !== password) {
+            return res.render('Login', { errorMessage: 'Invalid username or password' });
+        }
+
+        // If user exists and password is correct, redirect to the home page
+        res.redirect('/'); // Redirect to the home page
+    } catch (err) {
+        console.error(err); // Log any errors
+        res.status(500).send('Internal Server Error'); // Send an error response
+    }
+});
 
 
 // index route
@@ -95,12 +109,13 @@ app.get("/UserProfile", function(req, res) {
 })
 
 // signup route
-app.get("/Signup", function(req, res) {
-    res.render("Signup"); // Rendering Signup.ejs
+app.get('/Signup', function(req, res) {
+    res.render('Signup', { errorMessage: null }); // Pass null as errorMessage initially
 });
 
+
 app.get("/Login", function(req, res) {
-    res.render("Login"); // Rendering Login.ejs
+    res.render("Login", { errorMessage: null }); // Pass null as errorMessage initially
 });
 
 // movie information route
