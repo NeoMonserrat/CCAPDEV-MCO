@@ -7,11 +7,10 @@ a {
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    border: 5px solid black;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     color: black;
-    border: 5px solid black;
 }
 
 .forum-header {
@@ -42,44 +41,8 @@ a {
     margin-bottom: 10px;
 }
 
-.gen-discussion {
-    color: #333;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.gen-discussion h3 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-}
-
-.gen-discussion p {
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
-.movies-discussion {
-    color: #333;
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.movies-discussion h3 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-}
-
-.movies-discussion p {
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
+.general-discussion,
+.movies-discussion,
 .tv-shows-discussion {
     color: #333;
     background-color: #f0f0f0;
@@ -89,11 +52,15 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.general-discussion h3,
+.movies-discussion h3,
 .tv-shows-discussion h3 {
     font-size: 1.3em;
     margin-bottom: 5px;
 }
 
+.general-discussion p,
+.movies-discussion p,
 .tv-shows-discussion p {
     font-size: 1em;
     margin-bottom: 0;
