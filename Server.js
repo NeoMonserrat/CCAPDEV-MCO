@@ -128,7 +128,7 @@ app.get('/MovieInformation.html', (req, res) => {
     // Extract the title from the query parameter
     const title = req.query.title || 'DefaultTitle';
     // Construct the file path based on the title
-    const filePath = path.join(__dirname, 'public', 'MovieInformation.html');
+    const filePath = path.join(__dirname, 'MovieInformation.html');
     // Send the HTML file
     res.sendFile(filePath);
 });
