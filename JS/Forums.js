@@ -1,9 +1,7 @@
 $(document).ready(function() {
-    // Get the query string parameters
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     
-    // Get the post data from the query string
     const postData = {
         title: urlParams.get('title'),
         category: urlParams.get('category'),
@@ -11,7 +9,6 @@ $(document).ready(function() {
         date: new Date(urlParams.get('date')).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' })
     };
 
-    // Create a new post element
     const newPost = $(`
     <div class="post">
         <h3><a href="#">${postData.title}</a></h3>
@@ -21,7 +18,6 @@ $(document).ready(function() {
     </div>
 `);
 
-    // Append the new post to the correct section based on the category
     switch (postData.category) {
         case "General":
             $(".general-discussion").append(newPost);
@@ -33,7 +29,6 @@ $(document).ready(function() {
             $(".tv-shows-discussion").append(newPost);
             break;
         default:
-            // If category is not recognized, append to General Discussions
             $(".general-discussion").append(newPost);
             break;
     }
