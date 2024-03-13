@@ -1,8 +1,17 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const morgan = require('morgan');
 
 app.use(express.static(__dirname));
+
+// Set EJS as view engine
+app.set('view engine', 'ejs');
+
+// Set the directory for EJS files
+app.set('views', path.join(__dirname, 'HTML'));
+
+app.use(morgan('dev'));
 
 // index route
 app.get("/", function(req, res) {
@@ -41,18 +50,24 @@ app.get("/UserProfile", function(req, res) {
 
 // signup route
 app.get("/Signup", function(req, res) {
-    res.sendFile(__dirname + "/HTML/Signup.html");
-})
+    res.render("Signup"); // Rendering Signup.ejs
+});
+
+// signup route
+app.get("/Signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "/HTML/Signup.ejs"));
+});
 
 // movie information route
 app.get("/Movieinformation", function(req, res) {
-    res.sendFile(__dirname + "/HTML/Signup.html");
+    res.sendFile(__dirname + "/HTML/MovieInformation.html");
 })
 
 //404 page
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/HTML/404.html");
 });
+
 
 app.listen(3000, function() {
     console.log("Server starting on port 3000");
