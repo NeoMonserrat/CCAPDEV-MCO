@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 
 //connect to mongodb
 const dbURI = 'mongodb+srv://Ultiplox:netboxd123@cluster0.vmfdndf.mongodb.net/';
-mongoose.connect(dbURI);
+mongoose.connect(dbURI)
+.then((result) => app.listen(3000))
+.catch((err) => console.log(err));
 
 app.use(express.static(__dirname));
 
@@ -78,7 +80,3 @@ app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/HTML/404.html");
 });
 
-
-app.listen(3000, function() {
-    console.log("Server starting on port 3000");
-});
