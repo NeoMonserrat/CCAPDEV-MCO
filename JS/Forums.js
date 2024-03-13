@@ -21,7 +21,6 @@ $(document).ready(function() {
     </div>
 `);
 
-
     // Append the new post to the correct section based on the category
     switch (postData.category) {
         case "General":

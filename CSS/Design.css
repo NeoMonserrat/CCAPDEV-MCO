@@ -13,7 +13,6 @@ img {
 
 a:link {
     text-decoration: none!important;
-    color: white;
 }
 
 ::-webkit-scrollbar {
@@ -208,12 +207,6 @@ main {
     flex: 1;
 }
 
-main {
-    background-color: #141414;
-    color: white;
-    flex-grow: 1;
-}
-
 footer {
     display: flex;
     background-color: black;
@@ -300,4 +293,8 @@ footer h3{
 
 .review-section {
     padding: 15px;
+}
+
+main {
+    background-color: #141414;
 }

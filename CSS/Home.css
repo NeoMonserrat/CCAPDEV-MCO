@@ -112,3 +112,8 @@
     padding: 10px 10px;
     cursor: pointer;
 }
+
+main {
+    color: white;
+    flex-grow: 1;
+}
