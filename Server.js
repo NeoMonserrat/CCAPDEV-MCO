@@ -18,20 +18,46 @@ app.set('view engine', 'ejs');
 
 // Set the directory for EJS files
 app.set('views', path.join(__dirname, 'HTML'));
-
 app.use(morgan('dev'));
+app.use(express.urlencoded({extended:false}))
 
 //add user through Mongo
-app.post('/Signup',async (req, res) => {
-    const data={
-        user: req.body.yourUser,
-        pass: req.body.yourPass,
-        email: req.body.yourEmail,
-    }
-    await User.insertMany([data]);
-
-    res.render("Login");
+// signup route (GET)
+app.get("/Signup", function(req, res) {
+    res.render("Signup"); // Rendering Signup.ejs
 });
+
+// signup route (POST)
+app.post('/Signup', async (req, res) => {
+
+    console.log(req.body);
+    // Check if the username already exists
+    const existingUser = await User.findOne({ $or: [{ username: req.body.username }, { email: req.body.email }] });
+    if (existingUser) {
+        // Pass the error message to the EJS template
+        return res.render('Signup', { errorMessage: 'Username or email already exists' });
+    } else if (req.body.password != req.body.repassword) {
+            return res.render('Signup', { errorMessage: 'Re-enter password did not match the password' });
+    }
+
+    // Create a new user document
+    const newUser = new User({
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
+    });
+
+    try {
+        // Save the new user to the database
+        await newUser.save();
+        res.redirect('/Login'); // Redirect to the login page
+    } catch (err) {
+        console.error(err); // Log any errors
+        res.status(500).send('Internal Server Error'); // Send an error response
+    }
+});
+
+
 
 // index route
 app.get("/", function(req, res) {
