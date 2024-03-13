@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home | Netflix Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='../CSS/Admin.css' rel='stylesheet'>
+    <link href='../CSS/Design.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+    
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="../HTML/index.html"><img src="../Media/N-Logo.png" height="25" alt="Netflix Logo"></a>
+                <div class="movies">
+                    <button class="moviesbtn">Movies & Shows</button>
+                    <div class="movies-content">
+                        <a href="../HTML/Movies.html">Movies</a>
+                        <a href="../HTML/TV Shows.html">TV Shows</a>
+                    </div>
+                </div>
+                <div class="forums">
+                    <a href="../HTML/Forums.html">Forums</a>
+                </div>
+                <a href="../HTML/Help.html">Help</a>
+            </div>
+            <div class="buttons">
+                <div class="search">
+                    <input class="search-bar" type="text">
+                    <input type="submit" value="search" class="search-submit">
+                </div>
+                <a class="button" href="../HTML/CreatePost.html">
+                    <div class="plus-icon"></div>
+                </a>
+                <a class="button" href="../HTML/UserProfile.html">
+                    <div class="person-icon"></div>
+                </a>
+                <a href="../HTML/Signup.ejs">
+                    <div class="signup">Sign up</div>
+                </a>
+            </div>
+        </nav>        
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="update-movies">
+                <h2>Update Movie Database</h2>
+                <form action="/update-movies" method="POST">
+                    <label for="movie-title">Movie Title:</label>
+                    <input type="text" id="movie-title" name="movie-title" required><br>
+                    
+                    <label for="director">Director:</label>
+                    <input type="text" id="director" name="director" required><br>
+                    
+                    <label for="cast">Cast:</label>
+                    <input type="text" id="cast" name="cast" required><br>
+                    
+                    <label for="synopsis">Synopsis:</label>
+                    <textarea id="synopsis" name="synopsis" rows="4" cols="50"></textarea><br>
+                    
+                    <label for="movie-image">Image URL:</label>
+                    <input type="text" id="movie-image" name="movie-image"><br>
+                    
+                    <input type="submit" value="Update Movie">
+                </form>
+            </section>
+            
+        
+            <section class="change-passwords">
+                <h2>Change Account Passwords</h2>
+                <form action="/change-passwords" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="new-password" required><br>
+                    <input type="submit" value="Change Password">
+                </form>
+            </section>
+        </div>
+    </main>
+    
+
+    <footer>
+        <div class="left_pillar"> 
+            <ul class="left_ul">  
+                <h3>Netboxd</h3>
+                <li> <a href="../HTML/index.html"> Home </a></li>
+                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
+                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
+            </ul>
+        </div>
+
+         <div class="center_pillar"> 
+            <div class="social_media">
+                <h3>Social Media</h3>
+            </div>
+             <div class="social_icons">
+                <ul>  
+                    <li><a href="https://www.facebook.com/netboxd"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/netboxd/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/netboxdOfficial"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@netboxd"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCJnSrgSig5Ujl031XaQzKVg"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+             </div>   
+        </div>
+        
+        <div class="right_pillar"> 
+            <ul class="right_ul">  
+                <h3>More Contacts</h3>
+                <li> Email: Netboxd@gmail.com</li>
+                <li> Tel: 1234-5678</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/JS/Home.js"></script>
+
+</body>
+</html>

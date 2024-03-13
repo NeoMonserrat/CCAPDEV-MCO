@@ -1,3 +1,7 @@
+body {
+    color: white;
+}
+
 .movie, .show {
     display: flex;
     align-items: center;

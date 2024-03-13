@@ -16,15 +16,6 @@ img {
     background-color: black;
 }
 
-.logo-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
-}
-
 header {
     height: auto;
     background-color: black;
@@ -149,7 +140,6 @@ nav .menu a:hover,
     background: url(../Media/SearchHover.png) no-repeat
 }
   
-
 .plus-icon,
 .person-icon,
 .setting-icon,
@@ -180,15 +170,19 @@ nav .menu a:hover,
 .signup {
     color: white;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
     text-decoration: none;
+    background-color: red;
+    border-radius: 5%;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signup:hover {
-    color: red;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
+    color: white;
+    background-color: rgba(100, 0, 0, 0.90);
 }
 
 body {

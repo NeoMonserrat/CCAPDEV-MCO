@@ -1,7 +1,7 @@
 .create-post-container {
     max-width: 1000px;
     height:700px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -24,7 +24,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
+.create-post-container [type="text"],
 select,
 textarea,
 input[type="date"] {
