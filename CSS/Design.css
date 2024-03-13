@@ -149,7 +149,6 @@ nav .menu a:hover,
     background: url(../Media/SearchHover.png) no-repeat
 }
   
-
 .plus-icon,
 .person-icon,
 .setting-icon,
@@ -180,15 +179,18 @@ nav .menu a:hover,
 .signup {
     color: white;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
     text-decoration: none;
+    background-color: red;
+    border-radius: 5%;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signup:hover {
-    color: red;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
+    background-color: #dc3545; 
 }
 
 body {
