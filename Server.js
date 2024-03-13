@@ -5,11 +5,13 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const User = require('./models/user');
 
+
 //connect to mongodb
-const dbURI = 'mongodb+srv://Ultiplox:netboxd123@cluster0.vmfdndf.mongodb.net/';
+const dbURI = 'mongodb+srv://dbUser:12345@atlascluster.xplzxgp.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
 mongoose.connect(dbURI)
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
+
 
 app.use(express.static(__dirname));
 
