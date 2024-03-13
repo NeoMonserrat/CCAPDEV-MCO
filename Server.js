@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const User = require('./models/user');
 
 //connect to mongodb
 const dbURI = 'mongodb+srv://Ultiplox:netboxd123@cluster0.vmfdndf.mongodb.net/';
@@ -19,6 +20,18 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'HTML'));
 
 app.use(morgan('dev'));
+
+//add user through Mongo
+app.post('/Signup',async (req, res) => {
+    const data={
+        user: req.body.yourUser,
+        pass: req.body.yourPass,
+        email: req.body.yourEmail,
+    }
+    await User.insertMany([data]);
+
+    res.render("Login");
+});
 
 // index route
 app.get("/", function(req, res) {
@@ -60,9 +73,8 @@ app.get("/Signup", function(req, res) {
     res.render("Signup"); // Rendering Signup.ejs
 });
 
-// signup route
-app.get("/Signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "/HTML/Signup.ejs"));
+app.get("/Login", function(req, res) {
+    res.render("Login"); // Rendering Login.ejs
 });
 
 // movie information route
