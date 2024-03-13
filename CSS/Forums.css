@@ -1,7 +1,3 @@
-a {
-    color: black;
-}
-
 .forums-container {
     max-width: 1300px;
     margin: 20px auto;
@@ -31,11 +27,7 @@ a {
     color: #666;
 }
 
-.forum-section {
-    margin-bottom: 40px;
-}
-
-.forum-section h2 {
+h2 {
     font-size: 1.8em;
     color: #333; 
     margin-bottom: 10px;
@@ -55,6 +47,7 @@ a {
 .general-discussion h3,
 .movies-discussion h3,
 .tv-shows-discussion h3 {
+    color: #333;
     font-size: 1.3em;
     margin-bottom: 5px;
 }
@@ -65,3 +58,17 @@ a {
     font-size: 1em;
     margin-bottom: 0;
 }
+
+.post {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Add margin at the bottom to separate each post */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-style: italic;
+    font-size: 10ch;
+}
+

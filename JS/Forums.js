@@ -8,11 +8,19 @@ $(document).ready(function() {
         title: urlParams.get('title'),
         category: urlParams.get('category'),
         content: urlParams.get('content'),
-        date: urlParams.get('date')
+        date: new Date(urlParams.get('date')).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' })
     };
 
     // Create a new post element
-    const newPost = $("<div class='post'><h3><a href='#'>" + postData.title + "</a></h3><p>" + postData.content + "</p></div>");
+    const newPost = $(`
+    <div class="post">
+        <h3><a href="#">${postData.title}</a></h3>
+        <p>${postData.content}</p>
+        <br>
+        <p class="date">${postData.date}</p>
+    </div>
+`);
+
 
     // Append the new post to the correct section based on the category
     switch (postData.category) {
