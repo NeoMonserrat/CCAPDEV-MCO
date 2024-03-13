@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 
 
-//connect to mongodb
+// connect to mongodb
+// username: dbUser
+// password: 12345
 const dbURI = 'mongodb+srv://dbUser:12345@atlascluster.xplzxgp.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
 mongoose.connect(dbURI)
 .then((result) => app.listen(3000))
