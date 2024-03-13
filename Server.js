@@ -70,6 +70,11 @@ app.get("/Movieinformation", function(req, res) {
     res.sendFile(__dirname + "/HTML/MovieInformation.html");
 })
 
+// admin route
+app.get("/Admin", function(req, res) {
+    res.sendFile(__dirname + "/HTML/Admin.html");
+})
+
 //404 page
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/HTML/404.html");
