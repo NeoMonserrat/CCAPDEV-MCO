@@ -1,6 +1,7 @@
 $(document).ready(function () {
+    // Handler for create post form submission
     $("#create-post-form").submit(function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         var postData = {
             title: $("#post-title").val(),
