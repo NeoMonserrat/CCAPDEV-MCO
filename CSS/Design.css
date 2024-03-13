@@ -16,15 +16,6 @@ img {
     background-color: black;
 }
 
-.logo-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
-}
-
 header {
     height: auto;
     background-color: black;
@@ -190,7 +181,8 @@ nav .menu a:hover,
 }
 
 .signup:hover {
-    background-color: #dc3545; 
+    color: white;
+    background-color: rgba(100, 0, 0, 0.90);
 }
 
 body {
