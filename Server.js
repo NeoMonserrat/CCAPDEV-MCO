@@ -2,6 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+
+//connect to mongodb
+const dbURI = 'mongodb+srv://Ultiplox:netboxd123@cluster0.vmfdndf.mongodb.net/';
+
+mongoose.connect(dbURI);
+
 
 app.use(express.static(__dirname));
 
