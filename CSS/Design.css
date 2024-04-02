@@ -110,8 +110,9 @@ nav .menu a:hover,
 }
 
 .search-bar {
-    margin-top: 10px;
-    height: 25px;
+    margin-top: 6px;
+    margin-right: 10px;
+    height: 30px;
     width: 200px;
     border: 1px solid gray;
     border-radius: 15px;
@@ -120,7 +121,7 @@ nav .menu a:hover,
 }
 
 .search-submit {
-    background: url(../Media/Search.png) no-repeat;
+    /*background: url(../Media/Search.png) no-repeat;*/
     border: none;
     cursor: pointer;
     display: block;
@@ -137,7 +138,7 @@ nav .menu a:hover,
   }
 
 .search-submit:hover {
-    background: url(../Media/SearchHover.png) no-repeat
+    /*background: url(../Media/SearchHover.png) no-repeat*/
 }
   
 .plus-icon,
