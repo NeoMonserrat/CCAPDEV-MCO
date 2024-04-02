@@ -1,12 +1,16 @@
 .help-content {
-    background-color: #f9f9f9;
-    max-width: 800px;
-    height: 700px;
+    max-width: 1300px;
     margin: 20px auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border: 5px solid black;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    color: #333; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.help-content h1 {
+    text-align: center;
 }
 
 .FAQ,
@@ -17,21 +21,6 @@
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.help-content h1,
-.help-content h2 {
-    margin-top: 0; 
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.help-content p {
-    margin-bottom: 15px;
-}
-
-.help-content .FAQ {
-    margin-bottom: 30px;
 }
 
 .help-content .Contacts {
@@ -49,6 +38,5 @@
 }
 
 .help-content ul li strong {
-    letter-spacing: 1px;
     margin-bottom: 10px;
 }

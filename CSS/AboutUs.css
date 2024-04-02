@@ -1,12 +1,17 @@
 .about-us-content {
-    background-color: #f9f9f9;
-    max-width: 800px;
-    height: 700px;
+    max-width: 1300px;
     margin: 20px auto;
     padding: 20px;
+    background-color: #f9f9f9;
+    border: 5px solid black;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    color: #333; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.about-us-content h1,
+.about-us-content h2 {
+    text-align: center;
 }
 
 .Overview,

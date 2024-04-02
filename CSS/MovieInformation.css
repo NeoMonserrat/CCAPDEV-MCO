@@ -1,14 +1,11 @@
-body {
-    color: white;
-}
-
 main {
     display: flex;
     max-width: 100%;
     justify-content: center;
+    color: white;
 }
 
-a {
+main a {
     color: white;
 }
 
