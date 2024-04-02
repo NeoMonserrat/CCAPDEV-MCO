@@ -45,24 +45,24 @@
     <main>
         <div class="container">
             <section class="update-movies">
-                <h2>Update Movie Database</h2>
+                <h2>Add Movie to Database</h2>
                 <form action="/update-movies" method="POST">
                     <label for="movie-title">Movie Title:</label>
-                    <input type="text" id="movie-title" name="movie-title" required><br>
+                    <input type="text" class="Information" id="movie-title" name="movie-title" required><br>
                     
                     <label for="director">Director:</label>
-                    <input type="text" id="director" name="director" required><br>
+                    <input type="text" class="Information" id="director" name="director" required><br>
                     
                     <label for="cast">Cast:</label>
-                    <input type="text" id="cast" name="cast" required><br>
+                    <input type="text" class="Information" id="cast" name="cast" required><br>
                     
                     <label for="synopsis">Synopsis:</label>
-                    <textarea id="synopsis" name="synopsis" rows="4" cols="50"></textarea><br>
+                    <textarea id="synopsis" class="Information" name="synopsis" rows="4" cols="50"></textarea><br>
                     
                     <label for="movie-image">Image URL:</label>
-                    <input type="text" id="movie-image" name="movie-image"><br>
+                    <input type="text" class="Information" id="movie-image" name="movie-image"><br>
                     
-                    <input type="submit" value="Update Movie">
+                    <input type="submit" class="AddButton" value="Add Movie" >
                 </form>
             </section>
         </div>

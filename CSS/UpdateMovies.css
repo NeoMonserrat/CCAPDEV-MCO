@@ -15,8 +15,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.update-movies,
-.change-passwords{
+.update-movies{
     color: #333;
     background-color: #d8d8d8;
     padding: 15px;
@@ -41,9 +40,7 @@ label {
     color: #666;
 }
 
-input[type="text"],
-input[type="password"],
-textarea {
+.Information {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -53,7 +50,7 @@ textarea {
     color: #333; /* Text color */
 }
 
-input[type="submit"] {
+.AddButton {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -62,7 +59,7 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
-input[type="submit"]:hover {
+.AddButton:hover {
     background-color: #0056b3;
 }
 
