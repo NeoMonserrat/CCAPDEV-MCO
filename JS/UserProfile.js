@@ -3,9 +3,7 @@ function showReview(title, content) {
 
     modal.classList.add("modal");
     modal.innerHTML = `
-    <div class="review-modal">
-                        
-                    
+    <div class="review-modal">         
         <div class="review-content-container">
             <div class="review-content-header">
                 <div class="review-title">${title}</div>
