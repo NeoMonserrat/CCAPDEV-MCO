@@ -30,7 +30,7 @@ nav {
     background-color: rgba(0, 0, 0, 1);
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
-    border-bottom-color: rgba(255, 0, 0, 0.9);;
+    border-bottom-color: rgba(255, 0, 0, 0.9);
     border-bottom-style: solid;
 }
 
@@ -38,7 +38,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .menu a {
@@ -102,7 +102,7 @@ nav .menu a:hover,
 }
 
 .button:hover {
-    background-color: none;
+    background-color: transparent;
 }
 
 .search {
@@ -121,7 +121,6 @@ nav .menu a:hover,
 }
 
 .search-submit {
-    /*background: url(../Media/Search.png) no-repeat;*/
     border: none;
     cursor: pointer;
     display: block;
@@ -133,18 +132,17 @@ nav .menu a:hover,
     top: 0;
     height: 28px;
     width: 28px;
-    transform: translate(0%, 36%);
     text-indent: -9999px;
-  }
+}
 
 .search-submit:hover {
     /*background: url(../Media/SearchHover.png) no-repeat*/
 }
-  
+
 .plus-icon,
 .person-icon,
 .setting-icon,
-.close-icon{
+.close-icon {
     width: 24px;
     height: 24px;
     margin: 10px;
@@ -186,7 +184,6 @@ nav .menu a:hover,
     text-decoration: none;
 }
 
-
 .signup:hover {
     color: white;
     background-color: rgba(100, 0, 0, 0.90);
@@ -200,17 +197,18 @@ body {
 
 main {
     flex: 1;
+    background-color: #141414;
 }
 
 footer {
     display: flex;
     background-color: black;
-    color: hsla(0, 0%, 100%, 0.662);  
-    height: 200px; 
+    color: hsla(0, 0%, 100%, 0.662);
+    height: 200px;
     justify-content: center;
     align-items: center;
     font-size: 13px;
-    border-top-color: rgba(255, 0, 0, 0.9);;
+    border-top-color: rgba(255, 0, 0, 0.9);
     border-top-style: solid;
 }
 
@@ -236,10 +234,9 @@ footer ul li {
 footer a {
     text-decoration: none;
     color: white;
-
 }
 
-footer h3{
+footer h3 {
     font-size: 20px;
 }
 
@@ -274,11 +271,11 @@ footer h3{
 }
 
 .social_icons ul li {
-    margin: 0 5px; 
+    margin: 0 5px;
 }
 
 .social_icons ul li i {
-    font-size: 24px; 
+    font-size: 24px;
     padding: 8px;
 }
 
@@ -288,8 +285,4 @@ footer h3{
 
 .review-section {
     padding: 15px;
-}
-
-main {
-    background-color: #141414;
 }
