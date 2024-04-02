@@ -7,7 +7,7 @@ $(document).ready(function () {
             title: param.get('title'),
             category: param.get('category'),
             content: param.get('content'),
-            date: new Date(param.get('date')).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' })
+            date: new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' })
         };
 
         const newPost = $(`

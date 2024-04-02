@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Handler for create post form submission
     $("#create-post-form").submit(function (event) {
         event.preventDefault();
 
