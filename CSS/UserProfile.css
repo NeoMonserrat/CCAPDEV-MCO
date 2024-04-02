@@ -1,55 +1,6 @@
 body {
     margin: 0;
 }
-nav {
-    top: -1px;  
-    display: flex;
-    position: sticky;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 1);
-    font-size: 20px;
-    border-bottom-color: rgba(255, 0, 0, 0.9);;
-    border-bottom-style: solid;
-    z-index: 2;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu a {
-    color: white;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-}
-
-body {
-    background-color: #141414;
-}
-nav a:hover,
-.movies:hover .moviesbtn {
-    background-color: rgba(100, 0, 0, 0.90);
-}
-
-.signup {
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-.signup:hover {
-    color: red;
-    text-align: center;
-    padding-top: 10px;
-    text-decoration: none;
-}
 
 .account-content {
     color: white;
@@ -57,7 +8,6 @@ nav a:hover,
     margin-right: 20px;
     margin-left: 20px;
     font-size: 1em;
-    
 }
 
 .line-divider {

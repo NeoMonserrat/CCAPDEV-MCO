@@ -108,11 +108,6 @@
     border-color: rgb(24, 22, 22);
 }
 
-.logo {
-    padding: 10px 10px;
-    cursor: pointer;
-}
-
 main {
     color: white;
     flex-grow: 1;

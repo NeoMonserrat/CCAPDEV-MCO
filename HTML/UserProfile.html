@@ -10,105 +10,110 @@
     </head>
     
     <body>
-        <nav>
-            <div class="menu">
-                <a href="../HTML/index.html"><img src="../Media/N-Logo.png" height="25" alt="Netflix Logo"></a>
-                <div class="movies">
-                    <button class="moviesbtn">Movies & Shows</button>
-                    <div class="movies-content">
-                        <a href="../HTML/Movies.html">Movies</a>
-                        <a href="../HTML/TV Shows.html">TV Shows</a>
+        <header>
+            <div class="TopBar">
+                <a class="logo" href="../HTML/index.html">
+                    <img src="../Media/Netboxd.png" height="40" alt="Netflix Logo">
+                </a>
+                <div class="buttons">
+                    <div class="icons">
+                        <a class="button" href="../HTML/CreatePost.html">
+                            <div class="plus-icon"></div>
+                        </a>
+                        <a class="button" href="../HTML/UserProfile.html">
+                        <div class="person-icon"></div>
+                        </a>
                     </div>
                 </div>
-                <a href="../HTML/Forums.html">Forums</a>
-                <a href="../HTML/AboutUs.html">About Us</a>
-                <a href="../HTML/Help.html">Help</a>
             </div>
-            <div class="buttons">
-                <div class="search">
-                    <input class="search-bar" type="text">
-                    <input type="submit" value="search" class="search-submit">
+            <nav>
+                <div class="menu">
+                    <div class="movies">
+                        <button class="moviesbtn">Movies & Shows</button>
+                        <div class="movies-content">
+                            <a href="../HTML/Movies.html">Movies</a>
+                            <a href="../HTML/TV Shows.html">TV Shows</a>
+                        </div>
+                    </div>
+                    <a href="../HTML/Forums.html">Forums</a>
+                    <a href="../HTML/AboutUs.html">About Us</a>
+                    <a href="../HTML/Help.html">Help</a>
                 </div>
-                <a class="button" href="../HTML/CreatePost.html">
-                    <div class="plus-icon"></div>
-                </a>
-                <a class="button" href="../HTML/UserProfile.html">
-                    <div class="person-icon"></div>
-                </a>
                 <a href="/Signup">
                     <div class="signup">Sign up</div>
                 </a>
-            </div>
-        </nav>      
+            </nav>        
+        </header>
 
-        <div class="account-content">
-            <h1 style="color: white">Account</h1>
-            <div class="line-divider"></div>
-
-            <div class="content"> 
-                <div class="content-container">
-                    <div class="profile-container"  role="button" onclick="showChangeProfilePicModal()">
-                        <img src="../Media/PFP-Moon.jpg" alt="Profile Picture" class="profile-picture">
-                        <div class="profile-transition">
-                            <div class="edit-prompt">Edit</div>
+        <main>
+            <div class="account-content">
+                <h1 style="color: white">Account</h1>
+                <div class="line-divider"></div>
+    
+                <div class="content"> 
+                    <div class="content-container">
+                        <div class="profile-container" role="button" onclick="showChangeProfilePicModal()">
+                            <img src="../Media/PFP-Moon.jpg" alt="Profile Picture" class="profile-picture">
+                            <div class="profile-transition">
+                                <div class="edit-prompt">Edit</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="profile-details">
-                        <div class ="username-container">
-                            <div class="username-label">Username:</div>
-                            <div class="username">bonitofsh</div>
-                            <span class="change-username" role="button" onclick="showChangeUsernameModal() "><a>Change username</a></span>
+                        <div class="profile-details">
+                            <div class ="username-container">
+                                <div class="username-label">Username:</div>
+                                <div class="username">bonitofsh</div>
+                                <span class="change-username" role="button" onclick="showChangeUsernameModal() "><a>Change username</a></span>
+                            </div>
+                            <div class ="password-container">
+                                <div class="password-label">Password:</div>
+                                <div class="password">*****</div>
+                                <span class="change-password" role="button" onclick="showChangePasswordModal()"><a>Change password</a></span>
+                            </div>
                         </div>
-                        <div class ="password-container">
-                            <div class="password-label">Password:</div>
-                            <div class="password">*****</div>
-                            <span class="change-password" role="button" onclick="showChangePasswordModal()"><a>Change password</a></span>
-                        </div>
-                    </div>
+                    </div>    
                     
-                </div>    
-                
-            </div>
-            <div class="line-divider"></div>
-            <div class="favorite-container">
-                <div class="favorite-header">
-                    <h2>Favorites</h2>
                 </div>
-                <div class="favorite-movies">
-                    <ul>
-                        <li>
-                            
-                            <a href="../HTML/Hereditary.html" onclick="showMovieInfo('Hereditary')">
-                            <div class="container"> 
-                                <img src="../Media/Hereditary.jpg"> 
-                                <div class="overlay">Hereditary</div>
-                            </div> 
-                            </a>
-                        </li>
-                    </ul>            
-                </div>
-            </div>
-            <div class="line-divider"></div>
-            
-            <div class="reviewed-container">
-                <div class="reviewed-header">
-                    <h2>My Reviews</h2>
-                </div>
-                <div class="reviewed-movies">
-                    <div class="temp-class">
+                <div class="line-divider"></div>
+                <div class="favorite-container">
+                    <div class="favorite-header">
+                        <h2>Favorites</h2>
+                    </div>
+                    <div class="favorite-movies">
                         <ul>
                             <li>
-                                <div class="container" role="button" onclick="showReview('Hereditary', 'This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.')">
+                                
+                                <a href="../HTML/Hereditary.html" onclick="showMovieInfo('Hereditary')">
+                                <div class="container"> 
                                     <img src="../Media/Hereditary.jpg"> 
                                     <div class="overlay">Hereditary</div>
-                                </div>                   
+                                </div> 
+                                </a>
                             </li>
-                        </ul>
+                        </ul>            
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+                
+                <div class="reviewed-container">
+                    <div class="reviewed-header">
+                        <h2>My Reviews</h2>
+                    </div>
+                    <div class="reviewed-movies">
+                        <div class="temp-class">
+                            <ul>
+                                <li>
+                                    <div class="container" role="button" onclick="showReview('Hereditary', 'This movie is absolutely terrifying! The atmosphere, the tension, and the performances are all top-notch. I couldnt sleep for days after watching it. Highly recommended for horror fans.')">
+                                        <img src="../Media/Hereditary.jpg"> 
+                                        <div class="overlay">Hereditary</div>
+                                    </div>                   
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <br><br>
+        </main>
+
         <footer>
             <div class="left_pillar"> 
                 <ul class="left_ul">  

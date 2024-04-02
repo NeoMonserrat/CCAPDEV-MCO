@@ -21,20 +21,44 @@ header {
     background-color: black;
 }
 
+.TopBar {
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom-color: rgba(255, 0, 0, 0.5);
+    border-bottom-style: solid;
+    height: 10vh;
+}
+
 nav {
     display: flex;
     position: sticky;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 1);
-    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    border-bottom-color: rgba(255, 0, 0, 0.9);
-    border-bottom-style: solid;
+    border: none;
+}
+
+.logo {
+    margin-left: 15px;
 }
 
 .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,7 +83,7 @@ nav {
     color: white;
     background-color: inherit;
     padding: 20px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .movies-content {
@@ -96,9 +120,11 @@ nav .menu a:hover,
 }
 
 .buttons {
+    margin-right: 30px ;
     display: flex;
-    padding: 0 30px;
-    text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover {
@@ -110,33 +136,29 @@ nav .menu a:hover,
 }
 
 .search-bar {
-    margin-top: 6px;
-    margin-right: 10px;
-    height: 30px;
-    width: 200px;
+    margin-left: 150px;
+    height: 40px;
+    width: 600px;
     border: 1px solid gray;
-    border-radius: 15px;
-    padding-left: 8px;
-    padding-right: 40px;
+    border-radius: 10px;
 }
 
 .search-submit {
+    background: url(../Media/Search.png) no-repeat;
     border: none;
     cursor: pointer;
     display: block;
-    margin: 0;
-    overflow: hidden;
     padding: 0;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 3px;
     height: 28px;
     width: 28px;
     text-indent: -9999px;
 }
 
 .search-submit:hover {
-    /*background: url(../Media/SearchHover.png) no-repeat*/
+    background: url(../Media/SearchHover.png) no-repeat;
 }
 
 .plus-icon,
@@ -166,27 +188,28 @@ nav .menu a:hover,
     background-image: url("../Media/AccountHover.png");
 }
 
+.buttons a {
+    text-decoration: none;
+}
+
 .signup {
+    margin-right: 20px;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
-    background-color: red;
-    border-radius: 5%;
-    width: 110px;
+    background-color: rgba(200, 0, 0, 0.90);
+    border-radius: 15px;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-}
-
-.buttons a {
-    text-decoration: none;
 }
 
 .signup:hover {
     color: white;
     background-color: rgba(100, 0, 0, 0.90);
+    color: black;
 }
 
 body {
