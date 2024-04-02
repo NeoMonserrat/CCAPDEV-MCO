@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Admin | Netflix Reviews</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='../CSS/Admin.css' rel='stylesheet'>
-        <link href='../CSS/Design.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="../JS/Auth.js"></script>
-    </head>
+<head>
+    <title>Admin | Netflix Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='../CSS/EditAccounts.css' rel='stylesheet'>
+    <link href='../CSS/Design.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+    
 <body>
     <header>
         <nav>
@@ -39,20 +39,24 @@
                     <div class="signup">Sign up</div>
                 </a>
             </div>
-        </nav>        
+        </nav>      
     </header>
 
     <main>
         <div class="container">
-            <div class="center">
-                <h1>Admin Panel</h1>
-                <div class="button-container">
-                    <a href="EditAccounts.html" class="choice">Edit Accounts</a>
-                    <a href="UpdateMovies.html" class="choice">Update Movies/TV Shows</a>
-                </div>
-            </div>
+            <section class="change-passwords">
+                <h2>Change Account Passwords</h2>
+                <form action="/change-passwords" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="new-password" required><br>
+                    <input type="submit" value="Change Password">
+                </form>
+            </section>
         </div>
     </main>
+    
 
     <footer>
         <div class="left_pillar"> 
@@ -64,11 +68,11 @@
             </ul>
         </div>
 
-        <div class="center_pillar"> 
+         <div class="center_pillar"> 
             <div class="social_media">
                 <h3>Social Media</h3>
             </div>
-            <div class="social_icons">
+             <div class="social_icons">
                 <ul>  
                     <li><a href="https://www.facebook.com/netboxd"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.instagram.com/netboxd/"><i class="fab fa-instagram"></i></a></li>
@@ -76,7 +80,7 @@
                     <li><a href="https://www.tiktok.com/@netboxd"><i class="fab fa-tiktok"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCJnSrgSig5Ujl031XaQzKVg"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-            </div>   
+             </div>   
         </div>
         
         <div class="right_pillar"> 
@@ -87,7 +91,7 @@
             </ul>
         </div>
     </footer>
-
     <script src="/JS/Home.js"></script>
+
 </body>
 </html>
