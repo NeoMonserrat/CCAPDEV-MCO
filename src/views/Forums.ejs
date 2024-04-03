@@ -64,7 +64,7 @@
                     </div>
                     <% posts.filter(post => post.post_category === 'General').forEach(post => { %>
                         <div class="post">
-                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <h3><a href="/Post"><%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
@@ -84,7 +84,7 @@
                     </div>
                     <% posts.filter(post => post.post_category === 'Movies').forEach(post => { %>
                         <div class="post">
-                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <h3><a href="/Post"><%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
@@ -104,7 +104,7 @@
                     </div>
                     <% posts.filter(post => post.post_category === 'TvShows').forEach(post => { %>
                         <div class="post">
-                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <h3><a href="/Post"><%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>

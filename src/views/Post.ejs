@@ -11,80 +11,12 @@
 </head>
 
 <body>
-    <header>
-        <div class="TopBar">
-            <a class="logo" href="/">
-                <img src="../Media/Netboxd.png" height="40" alt="Netflix Logo">
-            </a>
-            <div class="buttons">
-                <div class="icons">
-                    <a class="button" href="/CreatePost">
-                        <div class="plus-icon"></div>
-                    </a>
-                    <a class="button" href="/UserProfile">
-                    <div class="person-icon"></div>
-                    </a>
-                </div>
-            </div>
+    <div class="forums-container">
+        <div class="post">
+            <h3><%= post.post_title %></h3>
+            <p><%= post.post_content %></p>
+            <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
         </div>
-        <nav>
-            <div class="menu">
-                <div class="movies">
-                    <button class="moviesbtn">Movies & Shows</button>
-                    <div class="movies-content">
-                        <a href="/Movies">Movies</a>
-                        <a href="/TvShows">TV Shows</a>
-                    </div>
-                </div>
-                <a href="/Forums">Forums</a>
-                <a href="/AboutUs">About Us</a>
-                <a href="/Help">Help</a>
-            </div>
-            <a href="/Signup">
-                <div class="signup">Sign up</div>
-            </a>
-        </nav>        
-    </header>
-
-    <main>
-        <div class="post-container">
-            <h1>POST</h1>
-        </div>
-    </main>
-    
-    
-    <footer>
-        <div class="left_pillar"> 
-            <ul class="left_ul">  
-                <h3>Netboxd</h3>
-                <li> <a href="../HTML/index.html"> Home </a></li>
-                <li> <a href="../HTML/MovieInformation.html"> Movies Information </a></li>
-                <li> <a href="../HTML/ReviewsandRatings.html"> Reviews and Ratings </a></li>
-            </ul>
-        </div>
-
-         <div class="center_pillar"> 
-            <div class="social_media">
-                <h3>Social Media</h3>
-            </div>
-             <div class="social_icons">
-                <ul>  
-                    <li><a href="https://www.facebook.com/netboxd"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/netboxd/"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com/netboxdOfficial"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@netboxd"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCJnSrgSig5Ujl031XaQzKVg"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-             </div>   
-        </div>
-        
-        <div class="right_pillar"> 
-            <ul class="right_ul">  
-                <h3>More Contacts</h3>
-                <li> Email: Netboxd@gmail.com</li>
-                <li> Tel: 1234-5678</li>
-            </ul>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
