@@ -10,6 +10,7 @@ const loginRoutes = require('./src/routes/loginRoutes');
 const forumRoutes = require('./src/routes/forumRoutes');
 const createpostRoutes = require('./src/routes/createpostRoutes');
 const postRoutes = require('./src/routes/postRoutes');
+const adminRoutes = require('./src/routes/adminRoutes');
 
 // connect to mongodb
 // username: dbUser
@@ -37,12 +38,14 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
 
+
 // Use route files
 app.use('/Signup', signupRoutes);
 app.use('/Login', loginRoutes);
 app.use('/CreatePost', createpostRoutes);
 app.use('/Forums', forumRoutes);
 app.use('/Post', postRoutes)
+app.use('/Admin', adminRoutes)
 
 // index route
 app.get("/", function(req, res) {
@@ -103,11 +106,6 @@ app.get('/MovieInformation.html', (req, res) => {
     // Send the HTML file
     res.sendFile(filePath);
 });
-
-// admin route
-app.get("/Admin", function(req, res) {
-    res.sendFile(__dirname + "/HTML/Admin.html");
-})
 
 // edit accounts route
 app.get("/EditAccounts", function(req, res) {
