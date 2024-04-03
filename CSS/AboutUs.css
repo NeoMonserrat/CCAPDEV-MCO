@@ -12,7 +12,6 @@
 .about-us-content h1,
 .about-us-content h2 {
     text-align: center;
-    
 }
 
 .Overview, 
@@ -24,38 +23,52 @@
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text */
 }
 
-.help-content h1,
-.help-content h2 {
+.Overview h2,
+.Members h2,
+.Credits h2 {
     margin-top: 0; 
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-.help-content p {
+.Overview p,
+.Members p,
+.Credits p {
     margin-bottom: 15px;
 }
 
-.help-content .FAQ {
+.Overview .FAQ,
+.Members .FAQ,
+.Credits .FAQ {
     margin-bottom: 30px;
 }
 
-.help-content .Contacts {
+.Overview .Contacts,
+.Members .Contacts,
+.Credits .Contacts {
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
 
-.help-content ul {
+.Overview ul,
+.Members ul,
+.Credits ul {
     list-style: none;
     padding-left: 0;
 }
 
-.help-content ul li {
+.Overview ul li,
+.Members ul li,
+.Credits ul li {
     margin-bottom: 10px;
 }
 
-.help-content ul li strong {
+.Overview ul li strong,
+.Members ul li strong,
+.Credits ul li strong {
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
