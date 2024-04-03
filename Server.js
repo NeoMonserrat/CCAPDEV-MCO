@@ -17,15 +17,22 @@ const postRoutes = require('./src/routes/postRoutes');
 const dbURI = 'mongodb+srv://dbUser:12345@atlascluster.xplzxgp.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
 
 mongoose.connect(dbURI)
-    .then((result) => app.listen(3000))
-    .catch((err) => console.log(err));
+  .then(() => {
+    app.listen(3000, () => {
+      console.log('Server running on port 3000');
+    });
+  })
+  .catch((err) => {
+    console.error('Error connecting to database:', err);
+    process.exit(1);
+  })
 
 app.use(express.static(__dirname));
 
 // Set EJS as view engine
 app.set('view engine', 'ejs');
 
-// Set the directory for EJS files
+// Directory for EJS files
 app.set('views', path.join(__dirname, 'src/views'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
@@ -79,12 +86,12 @@ app.get("/UserProfile", function(req, res) {
 
 // signup route
 app.get('/Signup', function(req, res) {
-    res.render('Signup', { errorMessage: null }); // Pass null as errorMessage initially
+    res.render('Signup', { errorMessage: null }); 
 });
 
-
+// login route
 app.get("/Login", function(req, res) {
-    res.render("Login", { errorMessage: null }); // Pass null as errorMessage initially
+    res.render("Login", { errorMessage: null }); 
 });
 
 // Route to serve MovieInformation.html with custom title
@@ -112,7 +119,7 @@ app.get("/UpdateMovies", function(req, res) {
     res.sendFile(__dirname + "/HTML/UpdateMovies.html");
 })
 
-//404 page
+//404 page route
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/HTML/404.html");
 });

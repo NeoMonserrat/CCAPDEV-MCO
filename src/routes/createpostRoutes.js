@@ -7,6 +7,7 @@ router.post('/', async (req, res) => {
         post_title: req.body.post_title,
         post_category: req.body.post_category,
         post_content: req.body.post_content,
+        post_text: req.body.post_text,
         post_date: req.body.post_date
     });
 

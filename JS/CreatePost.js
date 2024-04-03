@@ -6,12 +6,14 @@ document.getElementById('createpostForm').addEventListener('submit', function(ev
     const title = document.getElementById('post_title').value;
     const category = document.getElementById('post_category').value;
     const content = document.getElementById('post_content').value;
-        
+    const text = document.getElementById('post_text').value;
+
     });
 
     function post(title, category, content, date){
         this.title = title;
         this.category = category;
         this.content = content;
+        this.text = text;
         this.date = date;
     }

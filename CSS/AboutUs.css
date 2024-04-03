@@ -12,15 +12,15 @@
 .about-us-content h1,
 .about-us-content h2 {
     text-align: center;
+    
 }
 
-.Overview,
-.Contacts, 
+.Overview, 
 .Members,
 .Credits {
     color: #333;
     background-color: #d8d8d8;
-    padding: 15px;
+    padding: 50px;
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
