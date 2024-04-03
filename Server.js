@@ -102,6 +102,16 @@ app.get("/Admin", function(req, res) {
     res.sendFile(__dirname + "/HTML/Admin.html");
 })
 
+// edit accounts route
+app.get("/EditAccounts", function(req, res) {
+    res.sendFile(__dirname + "/HTML/EditAccounts.html");
+})
+
+// update movies route
+app.get("/UpdateMovies", function(req, res) {
+    res.sendFile(__dirname + "/HTML/UpdateMovies.html");
+})
+
 //404 page
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/HTML/404.html");
