@@ -49,22 +49,22 @@
     <main>
         <div class="create-post-container">
             <h1>Create a Post</h1>
-            <form id="create-post-form">
+            <form id="createpostform" action="/CreatePost" method="post">
                 <div class="form-group">
-                    <label for="post-title">Title:</label>
-                    <input type="text" id="post-title" name="post-title" required>
+                    <label for="post_title">Title:</label>
+                    <input type="text" id="post_title" name="post_title" required>                
                 </div>
                 <div class="form-group">
-                    <label for="post-category">Category:</label>
-                    <select id="post-category" name="post-category" required>
+                    <label for="post_category">Category:</label>
+                    <select id="post_category" name="post_category" required>
                         <option value="General">General</option>
                         <option value="Movies">Movies</option>
                         <option value="TvShows">TV Shows</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="post-content">Content:</label>
-                    <textarea id="post-content" name="post-content" rows="8" required></textarea>
+                    <label for="post_content">Content:</label>
+                    <textarea id="post_content" name="post_content" rows="8" required></textarea>
                 </div>
                 <div class="button">
                     <button type="submit">Submit</button>

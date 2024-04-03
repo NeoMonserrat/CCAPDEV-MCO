@@ -1,19 +1,23 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const User = require('./models/user');
 
+// Imported route files
+const signupRoutes = require('./routes/signupRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+const forumRoutes = require('./routes/forumRoutes');
+const createpostRoutes = require('./routes/createpostRoutes');
 
 // connect to mongodb
 // username: dbUser
 // password: 12345
 const dbURI = 'mongodb+srv://dbUser:12345@atlascluster.xplzxgp.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
-mongoose.connect(dbURI)
-.then((result) => app.listen(3000))
-.catch((err) => console.log(err));
 
+mongoose.connect(dbURI)
+    .then((result) => app.listen(3000))
+    .catch((err) => console.log(err));
 
 app.use(express.static(__dirname));
 
@@ -25,58 +29,11 @@ app.set('views', path.join(__dirname, 'HTML'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
 
-// signup route (POST)
-app.post('/Signup', async (req, res) => {
-
-    console.log(req.body);
-    // Check if the username already exists
-    const existingUser = await User.findOne({ $or: [{ username: req.body.username }, { email: req.body.email }] });
-    if (existingUser) {
-        // Pass the error message to the EJS template
-        return res.render('Signup', { errorMessage: 'Username or email already exists' });
-    } else if (req.body.password != req.body.repassword) {
-            return res.render('Signup', { errorMessage: 'Re-enter password did not match the password' });
-    }
-
-    // Create a new user document
-    const newUser = new User({
-        username: req.body.username,
-        password: req.body.password,
-        email: req.body.email,
-    });
-
-    try {
-        // Save the new user to the database
-        await newUser.save();
-        res.redirect('/Login'); // Redirect to the login page
-    } catch (err) {
-        console.error(err); // Log any errors
-        res.status(500).send('Internal Server Error'); // Send an error response
-    }
-});
-
-// login route (POST)
-app.post('/Login', async (req, res) => {
-    const { username, password } = req.body;
-
-    try {
-        // Check if the user exists in the database
-        const user = await User.findOne({ username });
-
-        // If user is not found or password is incorrect, render login page with error message
-        if (!user || user.password !== password) {
-            return res.render('Login', { errorMessage: 'Invalid username or password' });
-        }
-
-        // If user exists and password is correct, redirect to the home page
-        res.redirect('/'); // Redirect to the home page
-
-    } catch (err) {
-        console.error(err); // Log any errors
-        res.status(500).send('Internal Server Error'); // Send an error response
-    }
-});
-
+// Use route files
+app.use('/Signup', signupRoutes);
+app.use('/Login', loginRoutes);
+app.use('/CreatePost', createpostRoutes);
+app.use('/Forums', forumRoutes);
 
 // index route
 app.get("/", function(req, res) {
@@ -95,7 +52,7 @@ app.get("/Tvshows", function(req, res) {
 
 // forums route
 app.get("/Forums", function(req, res) {
-    res.sendFile(__dirname + "/HTML/Forums.html");
+    res.sendFile(__dirname + "/Forums");
 })
 
 // help route
@@ -104,7 +61,7 @@ app.get("/Help", function(req, res) {
 })
 
 // create post route
-app.get("/Createpost", function(req, res) {
+app.get("/CreatePost", function(req, res) {
     res.sendFile(__dirname + "/HTML/CreatePost.html");
 })
 

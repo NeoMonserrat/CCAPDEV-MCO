@@ -56,13 +56,23 @@
                 <h2>General Discussions</h2>
                 <div class="general-discussion">
                     <div class="post">
-                        <h3><a href="#">Best Films?</a></h3>
-                        <p>Share your top picks and why they're must-watch!</p>
+                        <h3><a href="#">Random Discussion Thread
+                        </a></h3>
+                        <p>Share your thoughts on the latest movies!</p>
                         <br>
                         <p class="date">Posted by Admin</p>
                     </div>
+                    <% posts.filter(post => post.post_category === 'General').forEach(post => { %>
+                        <div class="post">
+                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <p><%= post.post_content %></p>
+                            <br>
+                            <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+                        </div>
+                    <% }) %>
                 </div>
             </section>
+            
             <section>
                 <h2>Movies</h2>
                 <div class="movies-discussion">
@@ -72,8 +82,17 @@
                         <br>
                         <p class="date">Posted by Admin</p>
                     </div>
+                    <% posts.filter(post => post.post_category === 'Movies').forEach(post => { %>
+                        <div class="post">
+                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <p><%= post.post_content %></p>
+                            <br>
+                            <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+                        </div>
+                    <% }) %>
                 </div>
             </section>
+            
             <section>
                 <h2>TV Shows</h2>
                 <div class="tv-shows-discussion">
@@ -83,6 +102,14 @@
                         <br>
                         <p class="date">Posted by Admin</p>
                     </div>
+                    <% posts.filter(post => post.post_category === 'TvShows').forEach(post => { %>
+                        <div class="post">
+                            <h3><a href="#"><%= post.post_title %></a></h3>
+                            <p><%= post.post_content %></p>
+                            <br>
+                            <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+                        </div>
+                    <% }) %>
                 </div>
             </section>
         </div>
