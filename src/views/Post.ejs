@@ -49,10 +49,10 @@
 <main>
     <div class="posts-container">
         <div class="post">
-            <h1><a href="/Post/<%= post._id %>">
-                <%= post.post_title %></a></h1>
-            <h2><%= post.post_content %></h2>
+            <h1><%= post.post_title %></h1>
+            <h3><%= post.post_content %></h3>
             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+            <hr>
             <div class="text-container">
                 <p><%= post.post_text %></p>
             </div>

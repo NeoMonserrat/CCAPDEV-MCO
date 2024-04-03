@@ -1,7 +1,7 @@
 /* Design for posts container */
 .posts-container {
     margin: 20px auto;
-    width: 80%;
+    width: 1000px;
 }
 
 /* Design for individual post */
@@ -14,11 +14,12 @@
 }
 
 .post h1 {
+    color: red;
+    text-decoration: none;
     margin-bottom: 10px;
 }
 
 .post h2 {
-    margin-bottom: 15px;
 }
 
 .post .date {
@@ -26,10 +27,16 @@
     color: #888;
 }
 
+hr {
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+
 .text-container {
     background-color: #cccccc;
     margin-top: 15px;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .text-container p {
