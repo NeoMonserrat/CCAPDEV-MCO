@@ -46,13 +46,18 @@ app.get("/Movies", function(req, res) {
 })
 
 // tv shows route
-app.get("/Tvshows", function(req, res) {
+app.get("/TvShows", function(req, res) {
     res.sendFile(__dirname + "/HTML/TV Shows.html");
 })
 
 // forums route
 app.get("/Forums", function(req, res) {
     res.sendFile(__dirname + "/Forums");
+})
+
+// forums route
+app.get("/AboutUs", function(req, res) {
+    res.sendFile(__dirname + "/HTML/AboutUs.html");
 })
 
 // help route
