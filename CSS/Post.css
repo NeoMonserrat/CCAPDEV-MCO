@@ -1,13 +1,37 @@
-.post-container {
-    color: #333;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Design for posts container */
+.posts-container {
+    margin: 20px auto;
+    width: 80%;
 }
 
-.date {
+/* Design for individual post */
+.post {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h1 {
+    margin-bottom: 10px;
+}
+
+.post h2 {
+    margin-bottom: 15px;
+}
+
+.post .date {
     font-style: italic;
-    font-size: 10ch;
+    color: #888;
+}
+
+.text-container {
+    background-color: #cccccc;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.text-container p {
+    line-height: 1.6;
 }
