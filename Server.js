@@ -50,12 +50,17 @@ app.get("/TvShows", function(req, res) {
     res.sendFile(__dirname + "/HTML/TV Shows.html");
 })
 
+// movie information route
+app.get("/MovieInformation", function(req, res) {
+    res.sendFile(__dirname + "/HTML/MovieInformation.html");
+})
+
 // forums route
 app.get("/Forums", function(req, res) {
     res.sendFile(__dirname + "/Forums");
 })
 
-// forums route
+// about us route
 app.get("/AboutUs", function(req, res) {
     res.sendFile(__dirname + "/HTML/AboutUs.html");
 })
@@ -90,7 +95,7 @@ app.get('/MovieInformation.html', (req, res) => {
     // Extract the title from the query parameter
     const title = req.query.title || 'DefaultTitle';
     // Construct the file path based on the title
-    const filePath = path.join(__dirname, 'MovieInformation.html');
+    const filePath = path.join(__dirname, '/HTML/MovieInformation.html');
     // Send the HTML file
     res.sendFile(filePath);
 });
