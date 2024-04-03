@@ -9,6 +9,7 @@ const signupRoutes = require('./src/routes/signupRoutes');
 const loginRoutes = require('./src/routes/loginRoutes');
 const forumRoutes = require('./src/routes/forumRoutes');
 const createpostRoutes = require('./src/routes/createpostRoutes');
+const postRoutes = require('./src/routes/postRoutes');
 
 // connect to mongodb
 // username: dbUser
@@ -25,7 +26,7 @@ app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
 
 // Set the directory for EJS files
-app.set('views', path.join(__dirname, 'HTML'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
 
@@ -34,6 +35,7 @@ app.use('/Signup', signupRoutes);
 app.use('/Login', loginRoutes);
 app.use('/CreatePost', createpostRoutes);
 app.use('/Forums', forumRoutes);
+app.use('/Post', postRoutes)
 
 // index route
 app.get("/", function(req, res) {
@@ -53,11 +55,6 @@ app.get("/TvShows", function(req, res) {
 // movie information route
 app.get("/MovieInformation", function(req, res) {
     res.sendFile(__dirname + "/HTML/MovieInformation.html");
-})
-
-// forums route
-app.get("/Forums", function(req, res) {
-    res.sendFile(__dirname + "/Forums");
 })
 
 // about us route

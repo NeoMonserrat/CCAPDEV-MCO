@@ -1,0 +1,13 @@
+.post-container {
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-style: italic;
+    font-size: 10ch;
+}
