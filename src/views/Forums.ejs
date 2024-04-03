@@ -57,7 +57,8 @@
                 <div class="general-discussion">
                     <% posts.filter(post => post.post_category === 'General').forEach(post => { %>
                         <div class="post">
-                            <h3><%= post.post_title %></h3>
+                            <h3><a href="/Post/<%= post._id %>">
+                                <%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
@@ -71,7 +72,8 @@
                 <div class="movies-discussion">
                     <% posts.filter(post => post.post_category === 'Movies').forEach(post => { %>
                         <div class="post">
-                            <h3><%= post.post_title %></h3>
+                            <h3><a href="/Post/<%= post._id %>">
+                                <%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
@@ -85,7 +87,8 @@
                 <div class="tv-shows-discussion">
                     <% posts.filter(post => post.post_category === 'TvShows').forEach(post => { %>
                         <div class="post">
-                            <h3><%= post.post_title %></h3>
+                            <h3><a href="/Post/<%= post._id %>">
+                                <%= post.post_title %></a></h3>
                             <p><%= post.post_content %></p>
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>

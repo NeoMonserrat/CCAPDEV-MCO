@@ -3,20 +3,60 @@
 <head>
     <title>Post | NetBoxD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../CSS/Design.css" rel="stylesheet">
-    <link href="../CSS/Post.css" rel="stylesheet">
+    <link href="/CSS/Design.css" rel="stylesheet">
+    <link href="/CSS/Post.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../JS/Post.js"></script>
+    <script src="/JS/PostHandler.js"></script>
 </head>
 
 <body>
-    <div class="forums-container">
+    <header>
+        <div class="TopBar">
+            <a class="logo" href="/">
+                <img src="../Media/Netboxd.png" height="40" alt="Netflix Logo">
+            </a>
+            <div class="buttons">
+                <div class="icons">
+                    <a class="button" href="/CreatePost">
+                        <div class="plus-icon"></div>
+                    </a>
+                    <a class="button" href="/UserProfile">
+                    <div class="person-icon"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="menu">
+                <div class="movies">
+                    <button class="moviesbtn">Movies & Shows</button>
+                    <div class="movies-content">
+                        <a href="/Movies">Movies</a>
+                        <a href="/TvShows">TV Shows</a>
+                    </div>
+                </div>
+                <a href="/Forums">Forums</a>
+                <a href="/AboutUs">About Us</a>
+                <a href="/Help">Help</a>
+            </div>
+            <a href="/Signup">
+                <div class="signup">Sign up</div>
+            </a>
+        </nav>        
+    </header>
+
+<main>
+    <div class="posts-container">
         <div class="post">
-            <h3><%= post.post_title %></h3>
+            <h3><a href="/Post/<%= post._id %>">
+                <%= post.post_title %></a></h3>
             <p><%= post.post_content %></p>
-            <p class="date">Posted on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+            <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
+            <p><%= post.post_text %></p>
         </div>
     </div>
+</main>
 </body>
 </html>
+
