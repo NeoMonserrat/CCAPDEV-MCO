@@ -5,10 +5,10 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 // Imported route files
-const signupRoutes = require('./routes/signupRoutes');
-const loginRoutes = require('./routes/loginRoutes');
-const forumRoutes = require('./routes/forumRoutes');
-const createpostRoutes = require('./routes/createpostRoutes');
+const signupRoutes = require('./src/routes/signupRoutes');
+const loginRoutes = require('./src/routes/loginRoutes');
+const forumRoutes = require('./src/routes/forumRoutes');
+const createpostRoutes = require('./src/routes/createpostRoutes');
 
 // connect to mongodb
 // username: dbUser
