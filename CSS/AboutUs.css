@@ -19,7 +19,7 @@
 .Credits {
     color: #333;
     background-color: #d8d8d8;
-    padding: 50px;
+    padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,4 +71,12 @@
 .Credits ul li strong {
     letter-spacing: 1px;
     margin-bottom: 10px;
+}
+
+.Overview img {
+    height: 300px;
+}
+
+.Credits img {
+    height: 300px;
 }
