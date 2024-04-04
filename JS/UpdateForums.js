@@ -27,4 +27,20 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.delete-button').click(function() {
+        const postId = $(this).data('post-id');
+        $.ajax({
+            url: `/Forums/delete/${postId}`,
+            method: 'DELETE',
+            success: function(response) {
+                console.log('Post deleted:', response);
+                // You can add further actions here, such as removing the deleted post from the DOM
+            },
+            error: function(err) {
+                console.error('Error deleting post:', err);
+            }
+        });
+    });
+
 });
