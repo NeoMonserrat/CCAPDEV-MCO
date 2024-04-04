@@ -1,8 +1,8 @@
-const { users } = require('./user'); // Adjust the path as needed
+const { users } = require('./user');
 
 // Function to handle form submission
 document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     // Get form input values
     const email = document.getElementById('yourEmail').value;
@@ -21,10 +21,8 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     // Create a new User object
     const newUser = new User(username, password, email);
     
-    // Perform signup process here...
     console.log('New user signed up:', newUser);
 
-    // Optionally, you can redirect the user to another page after signup
     window.location.href = 'login.html';
 });
 
