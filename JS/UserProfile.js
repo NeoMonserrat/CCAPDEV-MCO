@@ -33,41 +33,6 @@ function closeReview() {
     }
 }
 
-function showChangeUsernameModal() {
-    const modal = document.createElement("div");
-
-    modal.classList.add("modal");
-    modal.innerHTML = `
-        <div class="username-change-modal">
-            <div class="modal-content">
-                <div class="close-container">
-                    <span class="close-icon" onclick="closeChangeUsernameModal()">&times;</span>
-                </div>
-                <h2>Change Username</h2>
-                <input type="text" id="newUsername" placeholder="Enter your new username">
-                <button onclick="confirmChangeUsername()">Confirm</button>
-            </div>
-        </div>
-    `;
-
-    document.body.appendChild(modal);
-}
-
-function confirmChangeUsername() {
-    const newUsername = document.getElementById("newUsername").value;
-    if (newUsername.trim() !== "") {
-        document.querySelector('.username').textContent = newUsername;
-    }
-    closeChangeUsernameModal();   
-}
-
-function closeChangeUsernameModal() {
-    const modal = document.querySelector(".modal");
-    if (modal) {
-        modal.remove();
-    }
-}
-
 function showChangePasswordModal() {
     const modal = document.createElement("div");
 

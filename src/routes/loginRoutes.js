@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
         }
 
         // If user exists and password is correct, redirect to the home page
+        req.session.username = username;
         res.redirect('/'); // Redirect to the home page
 
     } catch (err) {

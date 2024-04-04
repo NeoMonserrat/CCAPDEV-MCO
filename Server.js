@@ -47,9 +47,23 @@ app.use('/Forums', forumRoutes);
 app.use('/Post', postRoutes)
 app.use('/Admin', adminRoutes)
 
-// index route
-app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/HTML/index.html");
+router.get('/', async (req, res) => {
+    const loggedInUsername = req.session.username;
+
+    // Check if the user is logged in
+    if (!loggedInUsername) {
+        // If not logged in, redirect to the login page
+        res.sendFile(__dirname + "/HTML/index.html");
+    }
+
+    try {
+        // Render the UserProfile page with the logged-in username
+        res.render('UserProfile', { loggedInUsername });
+
+    } catch (err) {
+        console.error(err); // Log any errors
+        res.status(500).send('Internal Server Error'); // Send an error response
+    }
 });
 
 // movies route
