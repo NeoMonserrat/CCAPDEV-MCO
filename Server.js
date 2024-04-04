@@ -87,16 +87,6 @@ app.get("/UserProfile", function(req, res) {
     res.sendFile(__dirname + "/HTML/UserProfile.html");
 })
 
-// signup route
-app.get('/Signup', function(req, res) {
-    res.render('Signup', { errorMessage: null }); 
-});
-
-// login route
-app.get("/Login", function(req, res) {
-    res.render("Login", { errorMessage: null }); 
-});
-
 // Route to serve MovieInformation.html with custom title
 app.get('/MovieInformation.html', (req, res) => {
     // Extract the title from the query parameter
@@ -106,16 +96,6 @@ app.get('/MovieInformation.html', (req, res) => {
     // Send the HTML file
     res.sendFile(filePath);
 });
-
-// edit accounts route
-app.get("/EditAccounts", function(req, res) {
-    res.sendFile(__dirname + "/HTML/EditAccounts.html");
-})
-
-// update movies route
-app.get("/UpdateMovies", function(req, res) {
-    res.sendFile(__dirname + "/HTML/UpdateMovies.html");
-})
 
 //404 page route
 app.use((req, res) => {

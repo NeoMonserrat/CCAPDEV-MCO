@@ -1,22 +1,27 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../models/post');
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
     res.render('Admin/Admin')
 });
 
 router.get('/UpdateForums', async (req, res) => {
-   res.render('Admin/UpdateForums')
+    try {
+        const posts = await Post.find({});
+        res.render('Admin/UpdateForums')
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
-router.get('/UpdateMovies', async (req, res) => {
-    res.render('Admin/UpdateMovies')
- });
-
- router.get('/UpdateAccounts', async (req, res) => {
-    res.render('Admin/UpdateAccounts')
- });
-
-
+router.delete('/UpdateForums/delete/:id', async (req, res) => {
+    const postId = req.params.id; 
+    console.log(postId)
+    const post = await Post.findByIdAndDelete(postId);
+    console.log('Successfully Deleted')
+    res.send(post);
+});
 
 module.exports = router;
