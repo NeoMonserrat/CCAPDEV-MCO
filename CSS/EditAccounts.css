@@ -49,8 +49,8 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #333; /* Text color */
+    background-color: #fff; 
+    color: #333; 
 }
 
 input[type="submit"] {
@@ -66,7 +66,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Horizontal divider */
 hr {
     border: 0;
     border-top: 1px solid #ccc;
