@@ -16,10 +16,11 @@ router.get('/UpdateForums', async (req, res) => {
     }
 });
 
-router.delete('UpdateForum/delete/:id', async (req, res) => {
+router.delete('/UpdateForums/delete/:id', async (req, res) => {
     const postId = req.params.id;
     try {
         const post = await Post.findByIdAndDelete(postId);
+        console.log(post)
         console.log('Successfully Deleted');
         res.send(post);
     } catch (err) {
@@ -27,6 +28,7 @@ router.delete('UpdateForum/delete/:id', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
 
 
 module.exports = router;

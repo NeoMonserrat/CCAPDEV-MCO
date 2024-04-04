@@ -29,7 +29,6 @@ $(document).ready(function () {
         });
     });
 
-    // Use event delegation to handle click on dynamic elements
     $(document).on('click', '.delete-button', function() {
         const postId = $(this).data('post-id');
         $.ajax({
