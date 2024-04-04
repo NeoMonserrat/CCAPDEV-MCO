@@ -73,11 +73,11 @@ h2 {
     font-size: 10ch;
 }
 
-.delete-button {
-    margin-top: 10px;
+.forums-container .delete-button {
+    margin-top: 20px;
     background-color: red; 
     color: white; 
-    padding: 10px 20px; 
+    padding: 10px 10px; 
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -85,7 +85,21 @@ h2 {
     transition: background-color 0.3s; 
 }
 
-.delete-button:hover {
+.forums-container .delete-button:hover {
     background-color: #d32f2f; 
+}
+
+.forums-container .button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.forums-container .button:hover {
+    background-color: #2980b9;
 }
 

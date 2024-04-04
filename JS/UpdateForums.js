@@ -8,6 +8,7 @@ $(document).ready(function () {
                     <p>${post.post_content}</p>
                     <br>
                     <p class="date">${post.post_date}</p>
+                    <button class="delete-button" data-post-id="${post._id}">Delete</button>
                 </div>
             `);
 
@@ -28,19 +29,18 @@ $(document).ready(function () {
         });
     });
 
-    $('.delete-button').click(function() {
+    // Use event delegation to handle click on dynamic elements
+    $(document).on('click', '.delete-button', function() {
         const postId = $(this).data('post-id');
         $.ajax({
-            url: `/Forums/delete/${postId}`,
+            url: `/Admin/UpdateForums/delete/${postId}`,
             method: 'DELETE',
             success: function(response) {
                 console.log('Post deleted:', response);
-                // You can add further actions here, such as removing the deleted post from the DOM
             },
             error: function(err) {
                 console.error('Error deleting post:', err);
             }
         });
     });
-
 });

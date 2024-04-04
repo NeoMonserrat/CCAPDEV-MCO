@@ -62,6 +62,7 @@
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
                             <button class="delete-button" data-post-id="<%= post._id %>">Delete</button>
+                            <a href="/Post/<%= post._id %>" class="button">Read More</a>
                         </div>
                     <% }) %>
                 </div>
@@ -78,6 +79,7 @@
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
                             <button class="delete-button" data-post-id="<%= post._id %>">Delete</button>
+                            <a href="/Post/<%= post._id %>" class="button">Read More</a>
                         </div>
                     <% }) %>
                 </div>
@@ -94,6 +96,7 @@
                             <br>
                             <p class="date">Created on <%= post.post_date.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' }) %></p>
                             <button class="delete-button" data-post-id="<%= post._id %>">Delete</button>
+                            <a href="/Post/<%= post._id %>" class="button">Read More</a>
                         </div>
                     <% }) %>
                 </div>
