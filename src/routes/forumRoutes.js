@@ -5,7 +5,7 @@ const Post = require('../models/post');
 router.get('/', async (req, res) => {
     try {
         const posts = await Post.find({});
-        res.render('Forums', { posts }); // Pass the posts to the EJS template
+        res.render('Forums', { posts }); 
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');

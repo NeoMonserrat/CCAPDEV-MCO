@@ -12,7 +12,6 @@ router.post('/', async (req, res) => {
     });
 
     try {
-        // Save the new post to the database
         await newPost.save();
         res.redirect('/Forums'); 
     } catch (err) {
